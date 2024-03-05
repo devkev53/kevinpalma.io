@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
+// import { defineConfig } from "vite";
 
-export default defineConfig({
-  base: "https://devkev53.github.io/kevinpalma.io/",
-});
+// export default defineConfig({
+//   base: "https://devkev53.github.io/kevinpalma.io/",
+// });

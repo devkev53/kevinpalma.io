@@ -5,6 +5,7 @@ nav {
   box-shadow: .2rem .2rem 1rem rgba(0,0,0,.3);
   backdrop-filter: blur(1rem);
   position: fixed;
+  z-index: 5;
 }
 
 .nav_container {
@@ -92,6 +93,7 @@ nav {
   width: 100%;
   transform: translateX(-100vw);
   transition: .3s all ease;
+  /* z-index: 5; */
 }
 
 .menu_container {
