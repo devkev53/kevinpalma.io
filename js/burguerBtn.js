@@ -1,5 +1,15 @@
-const burguerBtn = document.querySelector(".burguer_btn");
+export function burguerBtnFunction() {
+  const burguerBtn = document.querySelector(".burguer_btn");
 
-burguerBtn.addEventListener("click", () => {
-  burguerBtn.classList.toggle("openMenu");
-});
+  const linksMenu = document.querySelectorAll(".menu_link");
+
+  burguerBtn.addEventListener("click", () => {
+    burguerBtn.classList.toggle("openMenu");
+  });
+
+  linksMenu.forEach((link) => {
+    link.addEventListener("click", () => {
+      burguerBtn.classList.remove("openMenu");
+    });
+  });
+}

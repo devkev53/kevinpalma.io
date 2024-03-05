@@ -1,5 +1,13 @@
-import { drawMyLogo } from "../js/icons/kpLogo";
-import { drawSocialIcons } from "../js/icons/socialIcons";
+let isDebug = true;
 
-drawMyLogo();
-drawSocialIcons();
+const checkModalState = () => {
+  if (isDebug) {
+    return window.localStorage.getItem("closeModal") ?? false;
+  }
+};
+
+import { burguerBtnFunction } from "./burguerBtn";
+import { closeModal } from "./workinSiteModal";
+
+burguerBtnFunction();
+closeModal(checkModalState);
