@@ -52,3 +52,9 @@ export function closeModal(state) {
 }
 
 closeModal(checkModalState);
+
+const btnCv = document.querySelector(".downloadCVBtn");
+
+btnCv.addEventListener("click", () => {
+  window.open("./assets/CV Bellini 2023.pdf", "_blank");
+});

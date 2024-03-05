@@ -129,6 +129,7 @@ nav {
     display: none;
   }
 
+
   .menu {
     transform: translate(0);
     height: auto;
@@ -146,6 +147,7 @@ nav {
     background: transparent;
   }
   .menu_link {
+    border-bottom: unset;
   }
   .menu_link::before,
   .menu_link::after {

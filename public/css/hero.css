@@ -23,9 +23,112 @@
   width: 120%;
 }
 
+
+/*-*-*-*-*-*-* MY INFO STYLES *-*-*-*-*-*-*/
+.myInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.myInfo h1 {
+  font-size: clamp(4rem, 5vw, 7rem);
+  margin: -2rem 0;
+}
+
+.downloadCVBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.downloadCVBtn .arrows {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  border: .3rem solid rgba(var(--orange));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.downloadCVBtn .arrows .bar {
+  background: rgba(var(--orange));
+  height: 50%;
+  width: .4rem;
+  border-radius: .5rem;
+  z-index: 2;
+}
+.downloadCVBtn .arrows .bar1 {
+  transform: rotate(-45deg) translateX(-.8rem);
+  position: absolute;
+  bottom: 1rem;
+}
+.downloadCVBtn .arrows .bar3 {
+  transform: rotate(45deg) translateX(.8rem);
+  position: absolute;
+  bottom: 1rem;
+}
+.downloadCVBtn .arrows .bar2 {
+  height: 65%;
+  position: absolute;
+}
+.downloadCVBtn .arrows::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 0;
+  background: rgba(var(--purple));
+  transition: .6s all ease;
+  animation: circleAnimated .6s;
+  /* bottom: 0; */
+}
+
+@keyframes circleAnimated {
+  0% {height: 150%;}
+  100% { height: 0;}
+}
+
+
+
 @media (min-width: 767px) {
   #hero {
     grid-auto-flow: column;
     grid-template-columns: auto auto;
+    gap: 4rem;
+  }
+
+  .myInfo {
+    align-items: flex-start;
+  }
+
+  .downloadCVBtn .arrows .bar1,
+  .downloadCVBtn .arrows .bar3 {
+    bottom: 1.3rem;
+    transition: .3s all ease;
+  }
+  .downloadCVBtn:hover .arrows .bar1,
+  .downloadCVBtn:hover .arrows .bar3 {
+    bottom: 1rem;
+  }
+
+  .downloadCVBtn .arrows .bar2 {
+    transform: translateY(-5rem);
+    transition: .3s all ease;
+  }
+  .downloadCVBtn:hover .arrows .bar2 {
+    transform: translateY(0);
+  }
+  .downloadCVBtn .arrows::after {
+    height: 150%;
+  }
+
+  .downloadCVBtn:hover .arrows::after {
+    transform: scaleX(0);
   }
 }

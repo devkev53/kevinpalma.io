@@ -13,3 +13,13 @@ main {
 .gosth {
   height: 7rem;
 }
+
+.primaryBtn {
+  width: 100%;
+  max-width: 26rem;
+  background: rgba(var(--purple));
+  /* max-height: 5.4rem; */
+  /* height: 100%; */
+  border-radius: 1.2rem;
+  justify-content: center;
+}
