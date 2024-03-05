@@ -45,6 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist repository
+          packageManager: "^pnpm@8.8.0"
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
