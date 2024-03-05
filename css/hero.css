@@ -1,0 +1,31 @@
+#hero {
+  display: grid;
+  min-height: calc(100vh - 7rem);
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.hero__logo_container {
+  width: clamp(28rem, 30vw, 44rem);
+  height: clamp(28rem, 30vw, 44rem);
+  background: #000;
+  border-radius: 50%;
+  border: .5rem solid #FFF;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__logo_container svg {
+  position: absolute;
+  height: 120%;
+  width: 120%;
+}
+
+@media (min-width: 767px) {
+  #hero {
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+  }
+}
