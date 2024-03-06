@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/vars.css">
     <link rel="stylesheet" href="./public/css/modal.css">
     <link rel="stylesheet" href="./public/css/nav.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/hero.css">
+    <link rel="stylesheet" href="./public/css/portfolio.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" defer src="./public/js/main.js"></script>
     <title>Kevin Palma | devkev53</title>
@@ -171,33 +173,129 @@
       <!-- -*-*-*-*-*-*-*- PORTFOLIO SECTION -*-*-*-*-*-*-*- -->
       <section id="portfolio">
         <h2 class="title">Portafolio</h2>
-        <section class="works_projects">
+        <div class="works_projects">
           <p>Estos son algunos de los proyectos en los cuales eh trabajado para clientes pequeños..!</p>
           <div class="container_projects">
-            <article>
-              <picture>
+
+            <article class="portfolio_item">
+              <!-- <h3 class="title">Nomapp</h3> -->
+              <picture class="portfolio_img_container">
                 <source media="(min-width: 767px)" srcset="./public/assets/imgs/projects/nomapp/desktop/2.png">
                 <img src="./public/assets/imgs/projects/nomapp/mobile/2.png" alt="">
+                <div class="project_title_wrapper">
+                  <h3 class="project_title title">Nomapp</h3>
+                </div>
+                <div class="tecnologies_wrapper">
+                  <ul class="tecnologies">
+                    <li>
+                      <a class="js_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="react_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="python_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="django_icon" href="">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </picture>
               <div class="description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit excepturi possimus aspernatur a. Voluptas blanditiis impedit velit nobis officia cumque.
+                <h3 class="title">Nomapp</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit excepturi possimus aspernatur a. Voluptas blanditiis impedit velit nobis officia cumque.
+                </p>
+              </div>
+              <div class="project_links">
+                <a href="">
+                  <span>Leer más...</span>
+                </a>
+                <a class="github_icon" href="">
+                </a>
+                <a class="site_icon" href=""></a>
               </div>
             </article>
-            <article>
-              <picture>
+
+            <article class="portfolio_item">
+              <picture class="portfolio_img_container">
                 <source media="(min-width: 767px)" srcset="./public/assets/imgs/projects/farmapp/desktop/2.png">
                 <img src="./public/assets/imgs/projects/farmapp/mobile/2.png" alt="">
+                <div class="project_title_wrapper">
+                  <h3 class="project_title title">Farmapp</h3>
+                </div>
+                <div class="tecnologies_wrapper">
+                  <ul class="tecnologies">
+                    <li>
+                      <a class="js_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="react_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="python_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="django_icon" href="">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </picture>
               <div class="description">
+                <h3 class="title">Farmapp</h3>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit excepturi possimus aspernatur a. Voluptas blanditiis impedit velit nobis officia cumque.
               </div>
             </article>
+
+            <article class="portfolio_item">
+              <picture class="portfolio_img_container">
+                <source media="(min-width: 767px)" srcset="./public/assets/imgs/projects/horus/desktop/2.png">
+                <img src="./public/assets/imgs/projects/horus/mobile/2.png" alt="">
+                <div class="project_title_wrapper">
+                  <h3 class="project_title title">Horus</h3>
+                </div>
+                <div class="tecnologies_wrapper">
+                  <ul class="tecnologies">
+                    <li>
+                      <a class="js_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="react_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="python_icon" href="">
+                      </a>
+                    </li>
+                    <li>
+                      <a class="django_icon" href="">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </picture>
+              <div class="description">
+                <h3 class="title">Horus</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit excepturi possimus aspernatur a. Voluptas blanditiis impedit velit nobis officia cumque.
+              </div>
+            </article>
+
+
           </div>
-        </section>
-        <section class="personal_projects">
-          <p>Igualmente me gusta realizar proyectos personales, para retarme o bine seguir aprendiendo cada dia mas</p>
-        </section>
+        </div>
       </section>
     </main>
+    <footer></footer>
   </body>
+  <script src="./public/js/tecnologies.js"></script>
 </html>

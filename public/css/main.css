@@ -52,7 +52,7 @@ main {
 }
 .social_link.logo_x::after {
   background: #FFF;
-  box-shadow: 0 0 1.5rem #FFF;;
+  box-shadow: 0 0 1.5rem #FFF;
 }
 
 @media (min-width: 767px) {
@@ -85,4 +85,12 @@ main {
   .social_link.logo_x:hover::after {
     box-shadow: 0 0 1.5rem #FFF;;
   }
+}
+
+
+
+
+
+footer {
+  height: 7rem;
 }
