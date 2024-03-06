@@ -23,3 +23,52 @@ main {
   border-radius: 1.2rem;
   justify-content: center;
 }
+
+.social_link.logo_linkedin::after {
+  background: #0E76A8;
+  box-shadow: 0 0 1.5rem #0E76A8;;
+}
+.social_link.logo_github::after {
+  background: rgba(var(--purple));
+  box-shadow: 0 0 1.5rem rgba(var(--purple));
+}
+.social_link.logo_youtube::after {
+  background: #C3352E;
+  box-shadow: 0 0 1.5rem #C3352E;;
+}
+.social_link.logo_x::after {
+  background: #FFF;
+  box-shadow: 0 0 1.5rem #FFF;;
+}
+
+@media (min-width: 767px) {
+  .social_link.logo_linkedin::after {
+    box-shadow: none;
+    transition: .6s all ease;
+  }
+  .social_link.logo_github::after {
+    box-shadow: none;
+    transition: .6s all ease;
+  }
+  .social_link.logo_youtube::after {
+    box-shadow: none;
+    transition: .6s all ease;
+  }
+  .social_link.logo_x::after {
+    box-shadow: none;
+    transition: .6s all ease;
+  }
+
+  .social_link.logo_linkedin:hover::after {
+    box-shadow: 0 0 1.5rem #0E76A8;;
+  }
+  .social_link.logo_github:hover::after {
+    box-shadow: 0 0 1.5rem rgba(var(--purple));
+  }
+  .social_link.logo_youtube:hover::after {
+    box-shadow: 0 0 1.5rem #C3352E;;
+  }
+  .social_link.logo_x:hover::after {
+    box-shadow: 0 0 1.5rem #FFF;;
+  }
+}

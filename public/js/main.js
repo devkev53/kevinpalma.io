@@ -56,5 +56,8 @@ closeModal(checkModalState);
 const btnCv = document.querySelector(".downloadCVBtn");
 
 btnCv.addEventListener("click", () => {
-  window.open("./assets/CV Bellini 2023.pdf", "_blank");
+  window.open(
+    "https://drive.google.com/file/d/1EiEgpNA3_btHuPjqt6d_84zrRLjxYCWj/view?usp=sharing",
+    "_blank"
+  );
 });

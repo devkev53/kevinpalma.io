@@ -105,6 +105,8 @@ nav {
 .menu_link {
   padding: 2rem;
   display: flex;
+  gap: 1rem;
+  align-items: center;
   justify-content: center;
   position: relative;
   border-bottom: .2rem solid rgba(0,0,0,.3);
@@ -137,17 +139,23 @@ nav {
     display: flex;
     top: unset;
     left: unset;
-    margin-left: auto;
     background: transparent;
-    width: auto;
+    width: 100%;
+    box-sizing: border-box;
   }
   .menu_container {
     flex-direction: row;
-    width: max-content;
+    width: 100%;
     background: transparent;
+    max-width: unset;
+    justify-content: flex-end;
+  }
+  .menu_item {
+    display: flex;
   }
   .menu_link {
     border-bottom: unset;
+    width: 100%;
   }
   .menu_link::before,
   .menu_link::after {

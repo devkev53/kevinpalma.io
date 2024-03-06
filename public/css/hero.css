@@ -3,7 +3,7 @@
   min-height: calc(100vh - 7rem);
   justify-content: center;
   align-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .hero__logo_container {
@@ -50,7 +50,7 @@
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 50%;
-  border: .3rem solid rgba(var(--orange));
+  border: .5rem solid rgba(var(--orange));
   position: relative;
   display: flex;
   justify-content: center;
@@ -95,6 +95,56 @@
 }
 
 
+/*-*-*-*-*-*-* SOCIAL LINKS *-*-*-*-*-*-*/
+.social_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.social_link {
+  color: #2c2c2c;
+  background: #131313;
+  padding: 1.5rem;
+  border-radius: 50rem;
+  position: relative;
+}
+.social_link svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.social_link::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(1.1);
+  animation: animatedSocials 2s infinite;
+}
+.social_link.logo_linkedin {
+  color: #0E76A8;
+}
+.social_link.logo_github {
+  color: rgba(var(--purple));
+}
+.social_link.logo_youtube {
+  color: #C3352E;
+}
+.social_link.logo_x {
+  color: #FFF;
+}
+
+@keyframes animatedSocials {
+  0% { transform: scale(1)}
+  50% {transform: scale(1.1)}
+  100% {transform: scale(1)}
+}
+
+
 
 @media (min-width: 767px) {
   #hero {
@@ -104,7 +154,7 @@
   }
 
   .myInfo {
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   .downloadCVBtn .arrows .bar1,
@@ -131,4 +181,48 @@
   .downloadCVBtn:hover .arrows::after {
     transform: scaleX(0);
   }
+
+
+  /*-*-*-*-*-*-* SOCIAL LINKS *-*-*-*-*-*-*/
+  .social_link.logo_linkedin {
+    color: #2c2c2c;
+    transition: .3s all ease;
+
+  }
+  .social_link.logo_github {
+    color: #2c2c2c;
+    transition: .3s all ease;
+
+  }
+  .social_link.logo_youtube {
+    color: #2c2c2c;
+    transition: .3s all ease;
+
+  }
+  .social_link.logo_x {
+    color: #2c2c2c;
+    transition: .3s all ease;
+  }
+  .social_link.logo_linkedin:hover {
+    color: #0E76A8;
+  }
+  .social_link.logo_github:hover {
+    color: rgba(var(--purple));
+  }
+  .social_link.logo_youtube:hover {
+    color: #C3352E;
+  }
+  .social_link.logo_x:hover {
+    color: #FFF;
+  }
+  .social_link::after {
+    transform: scale(.9);
+    transition: .3s all ease;
+    animation: unset;
+  }
+  .social_link:hover:after {
+    transform: scale(1.1);
+  }
+
+
 }
