@@ -7,8 +7,8 @@
 }
 
 .hero__logo_container {
-  width: clamp(28rem, 30vw, 44rem);
-  height: clamp(28rem, 30vw, 44rem);
+  width: clamp(24rem, 30vw, 44rem);
+  height: clamp(24rem, 30vw, 44rem);
   background: #000;
   border-radius: 50%;
   border: .5rem solid #FFF;
@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: center;
 }
 .hero__logo_container svg {
   position: absolute;
@@ -34,7 +35,7 @@
 }
 
 .myInfo h1 {
-  font-size: clamp(4rem, 5vw, 7rem);
+  font-size: clamp(3.5rem, 5vw, 6.5rem);
   margin: -2rem 0;
 }
 

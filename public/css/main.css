@@ -10,6 +10,14 @@ main {
   padding: 0 2rem;
 }
 
+@font-face {
+  font-family: "Semakin";
+  src: url("../assets/fonts/Semakin.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 .gosth {
   height: 7rem;
 }
@@ -22,6 +30,12 @@ main {
   /* height: 100%; */
   border-radius: 1.2rem;
   justify-content: center;
+}
+
+.title {
+  font-family: "Semakin";
+  letter-spacing: .4rem;
+  text-shadow: 0 0 .5rem rgba(0,0,0,.9);
 }
 
 .social_link.logo_linkedin::after {
