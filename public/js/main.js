@@ -147,7 +147,7 @@ workProjects.forEach((project) => {
         </p>
       </div>
       <div class="project_links">
-        <a target="_blank" href="${project.name}">
+        <a href="${project.name}">
           <span>Leer más...</span>
         </a>
         <a class="github_icon" target="_blank" href="${project.repository}">
