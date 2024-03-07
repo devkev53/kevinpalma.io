@@ -22,6 +22,8 @@
   position: absolute;
   height: 120%;
   width: 120%;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(5px 15px 5px rgba(0,0,0));
 }
 
 
@@ -154,10 +156,6 @@
     gap: 4rem;
   }
 
-  .myInfo {
-    /* align-items: flex-start; */
-  }
-
   .downloadCVBtn .arrows .bar1,
   .downloadCVBtn .arrows .bar3 {
     bottom: 1.3rem;
@@ -226,4 +224,20 @@
   }
 
 
+}
+
+
+@keyframes float {
+	0% {
+  /* -webkit-filter: drop-shadow(5px 15px 5px rgba(0,0,0)); */
+    transform:translatey(0px);
+	}
+	50% {
+    /* -webkit-filter: drop-shadow(5px 25px 5px rgba(0,0,0)); */
+		transform:translatey(-10px);
+	}
+	100% {
+    /* -webkit-filter: drop-shadow(5px 15px 5px rgba(0,0,0)); */
+		transform:translatey(0px);
+	}
 }
