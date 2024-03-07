@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="icon" type="image/ico" href="./public/favicon.ico" />
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/vars.css">
     <link rel="stylesheet" href="./public/css/modal.css">
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./public/css/hero.css">
     <link rel="stylesheet" href="./public/css/portfolio.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" defer src="./public/js/main.js"></script>
     <title>Kevin Palma | devkev53</title>
   </head>
   <body>
@@ -175,7 +174,7 @@
         <h2 class="title">Portafolio</h2>
         <div class="works_projects">
           <p>Estos son algunos de los proyectos en los cuales eh trabajado para clientes pequeños..!</p>
-          <div class="container_projects">
+          <div id="workProjectsContainer" class="container_projects">
 
             <article class="portfolio_item">
               <!-- <h3 class="title">Nomapp</h3> -->
@@ -297,5 +296,6 @@
     </main>
     <footer></footer>
   </body>
-  <script src="./public/js/tecnologies.js"></script>
+  <script type="module" src="./public/js/main.js"></script>
+  <!-- <script src="./public/js/tecnologies.js"></script> -->
 </html>
