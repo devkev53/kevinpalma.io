@@ -5,7 +5,6 @@ interface Props {
 
 const { title } = Astro.props;
 const {currentLocale} = Astro
-console.log({currentLocale})
 
 // -*-*-*-*-*-*- IMPORT ASTRO COMPONENTS -*-*-*-*-*-*-
 import Navbar from '@/components/Navbar.astro';
@@ -23,7 +22,7 @@ import '../styles/main.css'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/ico" href="/favicon.ico" />
+		<link rel="icon" type="svg" href="/kp.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>

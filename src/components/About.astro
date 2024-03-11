@@ -1,14 +1,76 @@
-
 ---
+import Ornaments from '@/icons/Ornaments.astro'
+import {useTranslations, getLangFromUrl} from '@/i18n/utils.ts'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <section id="about">
-  <div class="aboutContainer">
-    <h3>Sobre mí</h3>
+
+  <div class="container">
+    <h3 class="title">{t('about.title')}</h3>
+    <div class="content">
+      <div class="info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
+      </div>
+      <picture></picture>
+    </div>
   </div>
 </section>
 
+
+<style is:global>
+  .wavesContainer svg {
+    width: 150%;
+    color: rgba(var(--inverse),.2);
+  }
+</style>
 <style>
-  section {
-    min-height: 100vh;
+  #about {
+    display: flex;
+    justify-content: center;
+    background: rgba(var(--inverse), .2);
+    background: linear-gradient(rgba(var(--blue)) 30%, rgba(var(--bg)) 70%);
+    padding: 4rem 0;
+    position: relative;
+    overflowY: hidden;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+  #about::after {
+    content: '';
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    background: rgba(var(--blue));
+  }
+  .container {
+    width: 100%;
+    max-width: var(--max_width);
+    padding: 2rem;
+    position: relative;
+  }
+  .content {
+    display: grid;
+    grid-auto-flow: column;
+    z-index: 1;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .title {
+    font-size: clamp(3.8rem, 5vw, 6.5rem);
+    text-shadow: 0 0 1rem rgba(var(--bg), .6);
+  }
+  @media (min-width: 767px) {
+    .content {
+      grid-template-columns: 1fr minmax(40rem, auto);
+    }
   }
 </style>

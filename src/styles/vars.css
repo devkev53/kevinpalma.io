@@ -1,9 +1,18 @@
+:root {
+  /* SOCIAL COLORS */
+  --linkedin: 14, 118, 168;
+  --youtube: 195, 53, 46;
+  --github: 120, 60, 120;
+  --x: 255, 255, 255;
 
+  --max_width: 105.1rem;
+
+}
 html.light {
   --max_width: 105.1rem;
 
   /* COLORS  */
-  --bg: 229, 229, 229;
+  --bg: 231, 234, 243;
   --inverse:19,21,26;
   --text: 51,51,51;
   --nav: 26, 117, 159;
@@ -17,6 +26,9 @@ html.light {
   --orange: 252, 191, 5;
   --purple: 120, 81, 177;
   --pink: 203, 72, 183;
+  --blue: 170, 215, 217;
+  --yellow: 255, 207, 150;
+
 
   /* FONTS */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -42,6 +54,10 @@ html.dark {
   --orange: 252, 191, 5;
   --purple: 120, 81, 177;
   --pink: 203, 72, 183;
+  --blue: 45, 70, 85;
+  --yellow: 70, 70, 23;
+
+
 
   /* FONTS */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

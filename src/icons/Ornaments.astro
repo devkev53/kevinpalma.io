@@ -1,0 +1,33 @@
+<div class="ornament">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<style>
+  .ornament {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: clamp(10rem, 30vw, 20rem);
+    height: clamp(10rem, 30vw, 20rem);
+    left: -4rem;
+    top: 0;
+    margin-bottom: 35rem;
+    gap: clamp(.5rem, 2vw, 1.6rem);
+  }
+  .ornament span {
+    content: '';
+    background: rgba(var(--inverse), .1);
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>

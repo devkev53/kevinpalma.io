@@ -2,6 +2,7 @@
 import KpIcon from "@/icons/KpIcon.astro"
 import {useTranslations, getLangFromUrl} from '@/i18n/utils.ts'
 import ArrowDownEffect from '@/icons/ArrowDownEffect.astro'
+import SocialLinks from "@/components/SocialLinks.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -27,12 +28,13 @@ const t = useTranslations(lang);
         <div class='consoleUnderscore' id='console'>|</div>
       </h3>
       <h1 class="title">Kevin Palma</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, dicta aspernatur maiores architecto laborum alias!</p>
-      <p></p>
-      <button class="btn primaryBtn cvBtn">
-        <ArrowDownEffect/>
-        <span class="text">{t('home.downloadBtn')}</span>
-      </button>
+      <div class="downloadBtnWrapper">
+        <button class="btn primaryBtn cvBtn">
+          <ArrowDownEffect/>
+          <span class="text">{t('home.downloadBtn')}</span>
+        </button>
+      </div>
+      <SocialLinks/>
       <div class="ornament2">
         <span></span>
         <span></span>
@@ -51,11 +53,12 @@ const t = useTranslations(lang);
 
 <style>
   #home {
-    padding-top: 6rem;
-    min-height: 100vh;
-    width: 100%;
+    padding-top: clamp(6rem, 20vw, 22rem);
+    padding-bottom: clamp(8rem, 5vw, 18rem);
+    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
+    margin-bottom: 4rem;
   }
   .container {
     display: flex;
@@ -66,8 +69,8 @@ const t = useTranslations(lang);
     height: 100%;
     padding: 2rem;
     position: relative;
-    min-height: calc(100vh - 12rem);
     max-width: var(--max_width);
+    position: relative;
   }
   .ornament,
   .ornament2 {
@@ -77,11 +80,10 @@ const t = useTranslations(lang);
     grid-template-columns: 1fr 1fr 1fr;
     width: clamp(10rem, 30vw, 20rem);
     height: clamp(10rem, 30vw, 20rem);
-    top: 4rem;
     left: 4rem;
+    margin-bottom: 35rem;
     gap: clamp(.5rem, 2vw, 1.6rem);
     z-index: -1;
-    animation: ornamentAnimation 24s ease infinite;
   }
   .ornament2 span,
   .ornament span {
@@ -101,12 +103,13 @@ const t = useTranslations(lang);
     bottom: -4rem;
     width: clamp(8rem, 20vw, 12rem);
     height: clamp(8rem, 20vw, 12rem);
+    margin-bottom: unset;
   }
   .myInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     position: relative;
   }
   .textContainer {
@@ -124,13 +127,22 @@ const t = useTranslations(lang);
   }
   /* CONSOLE TEXT */
   .myInfo .title {
-    font-size: clamp(3.5rem, 5vw, 7rem);
+    font-size: clamp(3.8rem, 5vw, 6.5rem);
     text-align: center;
     /* color: rgba(var(--text)) */
     margin: -1rem 0;
     margin-bottom: -2rem;
     color: rgba(var(--orange));
     text-shadow: 0 0 1rem rgba(0,0,0, .8);
+  }
+  .downloadBtnWrapper {
+    width: 100%;
+    max-width: 28rem;
+    /* filter: drop-shadow(.5rem .5rem 1rem rgba(0,0,0,.7)); */
+    transition: .3s all ease;
+  }
+  .downloadBtnWrapper:has(button:hover) {
+    filter: drop-shadow(.5rem .5rem .5rem rgba(0,0,0,.9));
   }
 
   @media (min-width: 767px) {
@@ -151,10 +163,5 @@ const t = useTranslations(lang);
     .myInfo .title {
       text-align: left;
     }
-  }
-  @keyframes ornamentAnimation {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
   }
 </style>

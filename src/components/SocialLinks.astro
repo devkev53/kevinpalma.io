@@ -1,0 +1,171 @@
+---
+import LinkedinIcon from '@/icons/LinkedinIcon.astro'
+import GithubIcon from '@/icons/GithubIcon.astro'
+import YoutubeIcon from '@/icons/YoutubeIcon.astro'
+import XIcon from '@/icons/XIcon.astro'
+---
+
+<div class="socials">
+  <a class="socialLink linkedin" target="_blank" href="https://www.linkedin.com/in/devkev53">
+    <LinkedinIcon/>
+  </a>
+  <a class="socialLink github" target="_blank" href="https://github.com/devkev53">
+    <GithubIcon/>
+  </a>
+  <a class="socialLink youtube" target="_blank" href="https://www.youtube.com/@kevinpalma696">
+    <YoutubeIcon/>
+  </a>
+  <a class="socialLink x" target="_blank" href="https://twitter.com/kapalma05">
+    <XIcon/>
+  </a>
+</div>
+
+<style is:global>
+  .socialLink svg {
+    z-index: 2;
+  }
+  .light .x {
+    color:#000
+  }
+  .light .x::before {
+    transform: scale(1.25);
+    background: #000;
+    box-shadow: 0 0 1.5rem rgba(51,51,51, .7);
+  }
+  .light .socialLink::after {
+    background: #929292;
+  }
+  @media (min-width: 767px) {
+    .light .socialLink {
+      color: #000;
+    }
+    .light .socialLink::before {
+      transform: scale(.5);
+    }
+    .light .x:hover {
+      color:#000
+    }
+    .light .x:hover::before {
+      transform: scale(1.25);
+      background: #000;
+      box-shadow: 0 0 1.5rem rgba(51,51,51, .7);
+    }
+  }
+
+</style>
+<style>
+  .socials {
+    display: flex;
+    gap: 2rem;
+    max-width: 30rem;
+  }
+  .socialLink {
+    margin: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #222; */
+    padding: 1.5rem;
+    border-radius: 50%;
+    height: clamp(5rem, 5vw, 6rem);
+    width: clamp(5rem, 5vw, 6rem);
+    color: #FFF;
+    position: relative;
+    transition: .3s all ease;
+  }
+  .socialLink::before,
+  .socialLink::after {
+    content: '';
+    position: absolute;
+    background: #222;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .socialLink::before {
+    height: 90%;
+    width: 90%;
+    transition: .3s all ease;
+  }
+  .linkedin {
+    color: rgba(var(--linkedin));
+  }
+  .linkedin::before {
+    transform: scale(1.25);
+    background: rgba(var(--linkedin));
+    box-shadow: 0 0 1rem rgba(var(--linkedin), .9);
+  }
+  .github {
+    color:rgba(var(--github))
+  }
+  .github::before {
+    transform: scale(1.25);
+    background: rgba(var(--github));
+    box-shadow: 0 0 1rem rgba(var(--github), .9);
+  }
+  .youtube {
+    color:rgba(var(--youtube))
+  }
+  .youtube::before {
+    transform: scale(1.25);
+    background: rgba(var(--youtube));
+    box-shadow: 0 0 1rem rgba(var(--youtube), .9);
+  }
+  .x {
+    color:rgba(var(--x))
+  }
+  .x::before {
+    transform: scale(1.25);
+    background: rgba(var(--x));
+    box-shadow: 0 0 1rem rgba(var(--x), .9);
+  }
+  .light .x {
+    color:red
+  }
+  .light .x::before {
+    transform: scale(1.25);
+    background: red;
+    box-shadow: 0 0 1.5rem rgba(var(--x), .7);
+  }
+
+  @media (min-width: 767px) {
+    .socialLink {
+      color: currentColor;
+    }
+    .socialLink::before {
+      transform: scale(.5);
+    }
+    .linkedin:hover {
+      color: rgba(var(--linkedin));
+    }
+    .linkedin:hover::before {
+      transform: scale(1.25);
+      background: rgba(var(--linkedin));
+      box-shadow: 0 0 1rem rgba(var(--linkedin), .9);
+    }
+    .github:hover {
+      color:rgba(var(--github))
+    }
+    .github:hover::before {
+      transform: scale(1.25);
+      background: rgba(var(--github));
+      box-shadow: 0 0 1rem rgba(var(--github), .9);
+    }
+    .youtube:hover {
+      color:rgba(var(--youtube))
+    }
+    .youtube:hover::before {
+      transform: scale(1.25);
+      background: rgba(var(--youtube));
+      box-shadow: 0 0 1rem rgba(var(--youtube), .9);
+    }
+    .x:hover {
+      color:rgba(var(--x))
+    }
+    .x:hover::before {
+      transform: scale(1.25);
+      background: rgba(var(--x));
+      box-shadow: 0 0 1rem rgba(var(--x), .9);
+    }
+  }
+</style>

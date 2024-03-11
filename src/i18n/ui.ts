@@ -11,12 +11,18 @@ export const ui = {
     'nav.home': 'Inicio',
     'nav.about': 'Sobre mí',
     'nav.portfolio': 'Portafolio',
+    'home.title': 'Inicio',
     'home.downloadBtn': 'Descargar CV',
+    'about.title': 'Sobre Mí',
+    'portfolio.title': 'Portafolio',
   },
   en:{
     'nav.home': 'Home',
-    'nav.about': 'Aboutme ',
+    'nav.about': 'About me ',
     'nav.portfolio': 'Portfolio',
-    'home.downloadBtn': 'Download CV'
+    'home.title': 'Home',
+    'home.downloadBtn': 'Download CV',
+    'about.title': 'About me',
+    'portfolio.title': 'Portfolio',
   }
 } as const;

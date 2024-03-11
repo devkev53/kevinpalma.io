@@ -1,0 +1,27 @@
+---
+const {project} = Astro.props
+---
+<div class="container">
+  <picture>
+    <img src={project.picture} alt="">
+  </picture>
+  <div class="info">
+    <h4 class="subtitle">{project.name}</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sunt maiores, accusamus quisquam pariatur iure.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sunt maiores, accusamus quisquam pariatur iure.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sunt maiores, accusamus quisquam pariatur iure.</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  @media (min-width: 767px) {
+    .container {
+      grid-template-columns: minmax(55rem, 1fr) auto;
+    }
+  }
+</style>
