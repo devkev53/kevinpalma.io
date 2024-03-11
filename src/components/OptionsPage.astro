@@ -1,0 +1,50 @@
+---
+import LanguagePicker from "./LanguagePicker.astro"
+---
+
+<div class="options">
+  <LanguagePicker/>
+  <button class="theme">
+  </button>
+</div>
+
+<style>
+  .options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .options select {
+    display: flex;
+  }
+
+  .theme {
+    display: flex;
+    height: 3.6rem;
+    width: 3.6rem;
+    overflow: hidden;
+    background: rgba(var(--dark_bg));
+    border-radius: 50%;
+    background: #333;
+    /* animation: themeBtnAnimation 2s ease-in-out; */
+  }
+
+  /* -*-*-*-*-*-*-*-*-*- MEDIA QUERY 767px -*-*-*-*-*-*-*-*-*- */
+  @media (min-width: 767px) {
+    .options {
+      margin-left: unset;
+    }
+  }
+
+  /* -*-*-*-*-*-*-*-*-*- BUTTON THEME ANIMATION -*-*-*-*-*-*-*-*-*- */
+  @keyframes themeBtnAnimation {
+    0% {transform: scale(1) rotate(0);}
+    50% {transform: scale(0) rotate(360deg);}
+    100% {transform: scale(1) rotate(0);}
+  }
+  @keyframes inAnimation {
+    0% {transform: scale(0) rotate(360deg);}
+    100% {transform: scale(1) rotate(0);}
+  }
+</style>

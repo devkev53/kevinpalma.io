@@ -1,19 +1,182 @@
 ---
 import LogoKP from '@/icons/LogoKP.astro'
+import OptionsPage from '@/components/OptionsPage.astro'
+import Sun from '@/icons/Sun.astro'
+import ArrowDown from '@/icons/ArrowDown.astro'
+import {useTranslations, getLangFromUrl} from '@/i18n/utils.ts'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <nav>
   <div class="container">
-    <picture>
+    <!-- LOGO PICTURE -->
+    <picture class="logoContainer">
       <LogoKP/>
     </picture>
+
+    <!-- MENU CONTAINER -->
+    <div class="menu">
+      <div class="menuContainer">
+        <a class="nav_link" href="#home">{t('nav.home')}</a>
+        <a class="nav_link" href="#about">{t('nav.about')}</a>
+        <a class="nav_link" href="#portfolio">{t('nav.portfolio')}</a>
+      </div>
+    </div>
+
+    <!-- OPTIONS CONTAINER -->
+    <OptionsPage/>
+
   </div>
 </nav>
+
+
 
 <style>
   nav {
     width: 100%;
-    height: 7rem;
-    border: .1rem solid red;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: rgba(var(--bg), .8);
+    box-shadow: 0 0 1rem rgba(var(--text), .2);
+    color: rgba(var(--text));
+    z-index: 10;
+  }
+  .container {
+    width: 100%;
+    max-height: 6rem;
+    padding: .5rem 2rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background: rgba(var(--bg), .8);
+  }
+  .logoContainer {
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    min-height: 5rem;
+    min-width: 5rem;
+    background: #000;
+    border-radius: 50%;
+    border: .2rem solid #FFF;
+  }
+
+  /* OPTIONS NAVBAR MENU */
+  .options {
+    display: flex;
+  }
+
+
+  /* MENU LINK CONTAINER */
+  .menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .menuContainer {
+    background: rgba(var(--bg), .8);
+    box-shadow: 0 0 1rem rgba(var(--text), .2);
+    backdrop-filter: blur(.5rem);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 6rem;
+    padding: 0 2rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 40rem;
+  }
+  .menuContainer .nav_link {
+    display: flex;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-family: "Semakin";
+  }
+  .menuContainer .nav_link.active {
+    color: rgba(var(--purple));
+  }
+  .menuContainer .nav_link::after {
+    content: "<";
+    position: absolute;
+    font-weight: bold;
+    /* left: -1.2rem; */
+    left: 0;
+    color: rgba(var(--focus));
+  }
+  .menu .nav_link::before {
+    content: "/>";
+    position: absolute;
+    font-weight: bold;
+    /* right: -2.2rem; */
+    right: 0;
+    color: rgba(var(--focus));
+  }
+  .menuContainer .nav_link::after,
+  .menuContainer .nav_link::before {
+    opacity: 0;
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    transition: .3s all ease;
+  }
+  /* .menuContainer .nav_link:hover::after, */
+  .menuContainer .active::after {
+    left: -1.2rem;
+    opacity: 1;
+  }
+  /* .menuContainer .nav_link:hover::before, */
+  .menuContainer .active::before {
+    right: -1.9rem;
+    opacity: 1;
+  }
+
+
+
+
+  /* OPTIONS MENU */
+  .options {
+    display: flex;
+    height: 100%;
+  }
+  .theme {
+    height: 100%;
+  }
+
+  /* -*-*-*-*-*-*-*-*-*- MEDIA QUERY 767px -*-*-*-*-*-*-*-*-*- */
+  @media (min-width: 767px) {
+    nav {
+      backdrop-filter: blur(.5rem);
+    }
+    .container {
+      max-width: var(--max_width);
+      position: relative;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    /* MENU LINK CONTAINER */
+    .menu {
+      width: max-content;
+      margin-left: auto;
+    }
+    .menuContainer {
+      position: relative;
+      bottom: unset;
+      /* width: max-content; */
+      margin-left: auto;
+      justify-content: flex-end;
+      gap: 4rem;
+      box-shadow: unset;
+      backdrop-filter: unset;
+    }
   }
 </style>

@@ -1,0 +1,80 @@
+<div class="arrow">
+  <span class="bar bar1"></span>
+  <span class="bar bar2"></span>
+  <span class="bar bar3"></span>
+  <span class="bg"></span>
+</div>
+
+<style>
+  .arrow {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .arrow::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--orange));
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s all ease;
+  }
+  .arrow::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(var(--purple));
+    z-index: 1;
+    transition: .3s all ease;
+  }
+  .bar {
+    height: 40%;
+    position: absolute;
+    width: .4rem;
+    background: rgba(var(--orange));
+    border-radius: .3rem;
+    transition: .3s all ease;
+    z-index: 2;
+  }
+  .bar2 {
+    transform: translateY(-4rem);
+  }
+  .bar1 {
+    height: 40%;
+    transform: rotate(-45deg) translateX(-.55rem) translateY(-.2rem);
+  }
+  .bar3 {
+    height: 40%;
+    transform: rotate(45deg) translateX(.55rem) translateY(-.2rem);
+  }
+
+</style>
+
+<style is:global>
+  .cvBtn:hover .arrow::before {
+    opacity: 1;
+  }
+  .cvBtn:hover .arrow::after {
+    background: #48316A;
+    width: calc(100% - .8rem);
+    height: calc(100% - .8rem);
+  }
+  .cvBtn:hover .arrow .bar2 {
+    transform: translateY(0);
+    height: 60%;
+  }
+  .cvBtn:hover .arrow .bar1 {
+    transform: rotate(-45deg) translateX(-.8rem) translateY(.1rem);
+  }
+  .cvBtn:hover .arrow .bar3 {
+    transform: rotate(45deg) translateX(.8rem) translateY(.1rem);
+  }
+</style>

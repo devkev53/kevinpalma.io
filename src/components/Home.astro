@@ -1,0 +1,160 @@
+---
+import KpIcon from "@/icons/KpIcon.astro"
+import {useTranslations, getLangFromUrl} from '@/i18n/utils.ts'
+import ArrowDownEffect from '@/icons/ArrowDownEffect.astro'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="home">
+  <div class="container">
+    <div class="ornament">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <KpIcon/>
+    <div class="myInfo">
+      <h3 class="subtitle textContainer">
+        <span id="consoleText" class="text"></span>
+        <div class='consoleUnderscore' id='console'>|</div>
+      </h3>
+      <h1 class="title">Kevin Palma</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, dicta aspernatur maiores architecto laborum alias!</p>
+      <p></p>
+      <button class="btn primaryBtn cvBtn">
+        <ArrowDownEffect/>
+        <span class="text">{t('home.downloadBtn')}</span>
+      </button>
+      <div class="ornament2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  #home {
+    padding-top: 6rem;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+    min-height: calc(100vh - 12rem);
+    max-width: var(--max_width);
+  }
+  .ornament,
+  .ornament2 {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: clamp(10rem, 30vw, 20rem);
+    height: clamp(10rem, 30vw, 20rem);
+    top: 4rem;
+    left: 4rem;
+    gap: clamp(.5rem, 2vw, 1.6rem);
+    z-index: -1;
+    animation: ornamentAnimation 24s ease infinite;
+  }
+  .ornament2 span,
+  .ornament span {
+    content: '';
+    background: rgba(var(--inverse), .2);
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /*-*-*-*-*-*-* MY INFO STYLES *-*-*-*-*-*-*/
+  .ornament2 {
+    top: unset;
+    left: unset;
+    right: 0;
+    gap: clamp(.2rem, 2vw, 1rem);
+    bottom: -4rem;
+    width: clamp(8rem, 20vw, 12rem);
+    height: clamp(8rem, 20vw, 12rem);
+  }
+  .myInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+  .textContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .hidden {
+    opacity: 0;
+  }
+  .consoleUnderscore {
+    display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:10px;
+  }
+  /* CONSOLE TEXT */
+  .myInfo .title {
+    font-size: clamp(3.5rem, 5vw, 7rem);
+    text-align: center;
+    /* color: rgba(var(--text)) */
+    margin: -1rem 0;
+    margin-bottom: -2rem;
+    color: rgba(var(--orange));
+    text-shadow: 0 0 1rem rgba(0,0,0, .8);
+  }
+
+  @media (min-width: 767px) {
+    .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto minmax(50%, 30rem);
+      gap: 4rem;
+    }
+    /*-*-*-*-*-*-* MY INFO STYLES *-*-*-*-*-*-*/
+    .myInfo {
+      align-items: flex-start;
+    }
+    .textContainer {
+      justify-content: flex-start;
+    }
+    /* CONSOLE TEXT */
+    .myInfo .title {
+      text-align: left;
+    }
+  }
+  @keyframes ornamentAnimation {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }
+</style>

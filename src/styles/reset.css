@@ -139,14 +139,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(var(--purple-color), .5);
+  background: rgba(var(--purple), .5);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 body::-webkit-scrollbar-thumb:active {
-  background-color: rgba(var(--purple-color));
-}
-
-svg {
-  height: 3.2rem;
-  width: 3.2rem;
+  background-color: rgba(var(--purple));
 }
