@@ -42,6 +42,8 @@ const drawIcon = () => {
     document.querySelector("html").classList.remove("dark");
     themeBtn.classList.remove("dark");
     themeBtn.classList.add("light");
+    document.querySelector(".logoContainer").classList.add("light");
+    document.querySelector(".logoContainer").classList.remove("dark");
   }
 };
 

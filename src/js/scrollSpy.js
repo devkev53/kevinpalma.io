@@ -1,7 +1,8 @@
 const d = document;
-export function scrollSpy() {
-  const $sections = d.querySelectorAll("section");
 
+export function scrollSpy() {
+  const viewPortHeight = -(window.innerHeight - 80) + "px";
+  const $sections = d.querySelectorAll("section");
   const cb = (entries) => {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
@@ -14,8 +15,8 @@ export function scrollSpy() {
   };
   const observer = new IntersectionObserver(cb, {
     // root,
-    // rootMargin: "-250px",
-    threshold: [0.5, 0.98],
+    rootMargin: `0px 0px ${viewPortHeight} 0px`,
+    // threshold: ,
   });
   $sections.forEach((el) => observer.observe(el));
 }

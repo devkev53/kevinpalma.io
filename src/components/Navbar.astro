@@ -9,10 +9,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<nav>
+<nav class="navbar">
   <div class="container">
     <!-- LOGO PICTURE -->
-    <picture class="logoContainer">
+    <picture id="navbarLogo" class="logoContainer">
       <LogoKP/>
     </picture>
 
@@ -32,10 +32,37 @@ const t = useTranslations(lang);
 </nav>
 
 
-
 <style>
-  nav {
+  .navbar {
+    height: 6rem;
+    display: flex;
+    width: 100vw;
+    background: rgba(var(--bg), .8);
+    backdrop-filter: blur(.5rem);
+    box-shadow: 0 0 1rem rgba(var(--text), .2);
+    border: .1rem solid red;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
     width: 100%;
+    max-width: var(--max_width);
+    margin: 0 auto;
+    border: .1rem solid green;
+    padding: 1rem 2rem;
+  }
+  .logoContainer {
+    height: 100%;
+    width: 4rem;
+  }
+</style>
+<!-- <style>
+  nav {
+    width: 100vw;
     height: 6rem;
     display: flex;
     justify-content: center;
@@ -62,7 +89,10 @@ const t = useTranslations(lang);
     min-width: 5rem;
     background: #000;
     border-radius: 50%;
-    border: .2rem solid #FFF;
+    border: .2rem solid rgba(var(--inverse));
+  }
+  .logoContainer.light {
+    background: rgba(var(--bg));
   }
 
   /* OPTIONS NAVBAR MENU */
@@ -181,4 +211,4 @@ const t = useTranslations(lang);
       backdrop-filter: unset;
     }
   }
-</style>
+</style> -->
