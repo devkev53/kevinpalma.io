@@ -1,0 +1,90 @@
+---
+import {useTranslations, getLangFromUrl} from '@/i18n/utils.ts'
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {myClass} = Astro.props
+console.log(myClass)
+---
+
+<!-- MENU CONTAINER -->
+<div class={`menu ${myClass}`}>
+  <div class="menuContainer">
+    <a class="nav_link" href="#home">{t('nav.home')}</a>
+    <a class="nav_link" href="#about">{t('nav.about')}</a>
+    <a class="nav_link" href="#portfolio">{t('nav.portfolio')}</a>
+  </div>
+</div>
+
+<style>
+  .menu {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    height: 100%;
+    widows: 100%;
+    display: none;
+  }
+  .menuContainer {
+    display: flex;
+    widows: 100%;
+    gap: 1rem
+  }
+  .menuContainer .nav_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-family: "Semakin";
+    gap: .2rem;
+  }
+  .menuContainer .nav_link.active {
+    color: rgba(var(--purple));
+  }
+  .menu .nav_link::after,
+  .menu .nav_link::before {
+    content: "<";
+    /* width: 100% */
+    /* position: absolute; */
+    opacity: 0;
+    font-weight: bold;
+    color: rgba(var(--focus));
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    transition: .3s all ease;
+    z-index: -1;
+    transform: translateX(3rem)
+  }
+  .menu .nav_link::after {
+    content: "/>";
+    transform: translateX(-3rem)
+  }
+  .menuContainer .nav_link.active::after,
+  .menu .nav_link.active::before {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu.mobile {
+    display: flex;
+    height: 5rem;
+    background: rgba(var(--bg));
+    box-shadow: 0 0 1rem rgba(0,0,0, .9);
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  @media (min-width: 767px) {
+    .menu {
+      display: flex;
+    }
+    .mobile {
+      display: none;
+    }
+
+  }
+</style>

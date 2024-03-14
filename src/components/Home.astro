@@ -53,7 +53,7 @@ const t = useTranslations(lang);
 
 <style>
   #home {
-    padding-top: clamp(6rem, 20vw, 22rem);
+    padding-top: clamp(2rem, 15vw, 10rem);
     padding-bottom: clamp(8rem, 5vw, 18rem);
     /* min-height: 100vh; */
     display: flex;
@@ -67,6 +67,8 @@ const t = useTranslations(lang);
     justify-content: center;
     gap: 2rem;
     height: 100%;
+    width: 100%;
+    max-width: 10rem;
     padding: 2rem;
     position: relative;
     max-width: var(--max_width);
@@ -78,8 +80,8 @@ const t = useTranslations(lang);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    width: clamp(10rem, 30vw, 20rem);
-    height: clamp(10rem, 30vw, 20rem);
+    width: clamp(10rem, 30vw, 25rem);
+    height: clamp(10rem, 30vw, 25rem);
     left: 4rem;
     margin-bottom: 35rem;
     gap: clamp(.5rem, 2vw, 1.6rem);
@@ -124,6 +126,9 @@ const t = useTranslations(lang);
     position:relative;
     top:-0.14em;
     left:10px;
+  }
+  .myInfo {
+    width: 100%;
   }
   /* CONSOLE TEXT */
   .myInfo .title {
