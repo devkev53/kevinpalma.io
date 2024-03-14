@@ -7,9 +7,13 @@ export function scrollSpy() {
     entries.forEach((entry) => {
       const id = entry.target.getAttribute("id");
       if (entry.isIntersecting) {
-        d.querySelector(`.nav_link[href="#${id}"]`).classList.add("active");
+        d.querySelectorAll(`.nav_link[href="#${id}"]`).forEach((link) =>
+          link.classList.add("active")
+        );
       } else {
-        d.querySelector(`.nav_link[href="#${id}"]`).classList.remove("active");
+        d.querySelectorAll(`.nav_link[href="#${id}"]`).forEach((link) => {
+          link.classList.remove("active");
+        });
       }
     });
   };

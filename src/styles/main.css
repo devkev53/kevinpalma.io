@@ -9,8 +9,11 @@
 body {
   width: 100vw;
   /* height: 100vw; */
-  overflow-x: hidden;
   /* border: 1px solid red; */
+}
+
+main {
+  overflow: hidden;
 }
 
 .title {

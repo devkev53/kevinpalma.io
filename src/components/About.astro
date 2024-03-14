@@ -21,30 +21,36 @@ const t = useTranslations(lang);
 </section>
 
 
-<style is:global>
-  .wavesContainer svg {
-    width: 150%;
-    color: rgba(var(--inverse),.2);
-  }
-</style>
 <style>
   #about {
     display: flex;
     justify-content: center;
-    /* background: rgba(var(--inverse), .2); */
-    /* background: linear-gradient(rgba(var(--blue)) 30%, rgba(var(--bg)) 70%); */
-    /* padding: rem 0; */
     position: relative;
-    overflowY: hidden;
-    position: relative;
-    padding: 4rem 0;
+    /* position: relative; */
+    padding-bottom: 4rem;
+  }
+  #about::before,
+  #about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* height: 100%; */
+    width: 281%;
+    background: rgba(var(--inverse), .3);
+    transform: rotate(4deg);
+  }
+  #about::after {
+    background: rgba(var(--bg));
+    height: 2rem;
+    top: 2rem;
   }
   .container {
     width: 100%;
     max-width: var(--max_width);
     padding: 6rem 2rem;
-    /* color: #000; */
     position: relative;
+    z-index: 1;
   }
   .content {
     display: grid;
@@ -60,7 +66,7 @@ const t = useTranslations(lang);
   }
   .title {
     font-size: clamp(3.8rem, 5vw, 6.5rem);
-    text-shadow: 0 0 .5rem rgba(19,21,26, .9);
+    /* text-shadow: 0 0 1rem rgba(0,0,0, .8); */
   }
   @media (min-width: 767px) {
     .content {

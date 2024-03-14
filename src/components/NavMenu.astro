@@ -23,12 +23,15 @@ console.log(myClass)
     margin-left: auto;
     align-items: center;
     height: 100%;
-    widows: 100%;
+    /* width: 100%; */
+    display: none;
+  }
+  .menu.desktop {
     display: none;
   }
   .menuContainer {
     display: flex;
-    widows: 100%;
+    /* width: 100%; */
     gap: 1rem
   }
   .menuContainer .nav_link {
@@ -36,7 +39,7 @@ console.log(myClass)
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
     font-family: "Semakin";
     gap: .2rem;
   }
@@ -79,10 +82,10 @@ console.log(myClass)
   }
 
   @media (min-width: 767px) {
-    .menu {
+    .menu.desktop {
       display: flex;
     }
-    .mobile {
+    .menu.mobile {
       display: none;
     }
 
