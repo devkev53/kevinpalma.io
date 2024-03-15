@@ -8,15 +8,26 @@ const t = useTranslations(lang);
 <section id="about">
 
   <div class="container">
-    <h3 class="title">{t('about.title')}</h3>
-    <div class="content">
+    <h3 class="title aboutTitle">{t('about.title')}</h3>
+    <div class="content aboutContent">
       <div class="info">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex neque doloremque, dolore deleniti aliquid nihil a! Suscipit blanditiis necessitatibus sapiente possimus odio incidunt velit sed nulla? Incidunt ab, sint, magnam accusantium labore eum porro maxime mollitia in deserunt asperiores ratione.</p>
+        <p>{t('about.p1')}</p>
+        <p>{t('about.p2')}</p>
+        <p>{t('about.p3')}</p>
       </div>
-      <picture></picture>
+      <div class="pictureWrapper">
+        <picture class="myPicture">
+          <img src="/public/assets/imgs/picture.jpg" alt="" srcset="">
+        </picture>
+      </div>
     </div>
+    <!-- <h5>Habilidades</h5>
+    <div class="skills">
+      <div class="techs">
+        <a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a><a href="">text</a>
+      </div>
+      <div class="blands"></div>
+    </div> -->
   </div>
 </section>
 
@@ -54,23 +65,79 @@ const t = useTranslations(lang);
   }
   .content {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-rows: auto 1fr;
     z-index: 1;
     padding: 2rem;
     border-radius: 1.2rem;
+    gap: 2rem;
   }
   .info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    order: 2;
+    background: rgba(255,255,255,.1);
+    padding: 4rem 1rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+
+    view-timeline-name: --infoContent;
+    view-timeline-axis: block;
+
+    animation-timeline: --infoContent;
+    animation-name: show;
   }
   .title {
     font-size: clamp(3.8rem, 5vw, 6.5rem);
-    /* text-shadow: 0 0 1rem rgba(0,0,0, .8); */
+    /* opacity: 0; */
+    text-shadow: 0 0 .1rem rgba(0,0,0, 1);
   }
+  .pictureWrapper {
+    height: clamp(22rem, 30vw, 40rem);
+    width: clamp(22rem, 30vw, 40rem);
+    margin: 0 auto;
+    margin-bottom: -5rem;
+    order: 1;
+    filter: drop-shadow(.5rem .5rem 1rem rgba(0,0,0,.7));
+  }
+  .myPicture {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background: rgba(var(--inverse));
+    padding: .5rem;
+    transition: .3s all ease;
+  }
+  .myPicture img {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    height: 100%;
+    object-fit: cover;
+  }
+
   @media (min-width: 767px) {
     .content {
-      grid-template-columns: 1fr minmax(40rem, auto);
+      grid-auto-flow: column;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr minmax(22rem, 35rem);
     }
+    .pictureWrapper {
+      order: 2;
+      align-self: center;
+      margin-left: -5rem;
+      filter: drop-shadow(-.5rem .5rem 1rem rgba(0,0,0,.7));
+    }
+    .myPicture {
+      order: 2;
+      margin: 0;
+    }
+    .info {
+      padding: 4rem;
+    }
+  }
+  @keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  @keyframes showImg {
+    0% {opacity: 0; transform: scale(.1);}
+    100% {opacity: 1;}
   }
 </style>
