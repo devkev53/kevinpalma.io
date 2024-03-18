@@ -1,9 +1,13 @@
 import { consoleText } from "./consoleText";
 import { scrollSpy } from "./scrollSpy";
+import { scrollAnimatedAbout } from "./animations";
 import { themeController } from "./theme";
 
 // EXECUTE THE SCROLLL SPY FOR ACTIVATE THE NAVLINKS
 scrollSpy();
+
+// EXECUTE THE SCROLLL SPY FOR ANIMATE ABOUT
+scrollAnimatedAbout();
 
 // EXECUTE THE THEME CONTROLLER
 themeController();

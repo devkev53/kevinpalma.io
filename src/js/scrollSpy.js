@@ -1,4 +1,3 @@
-import { animatedAbout } from "./animations";
 const d = document;
 
 export function scrollSpy() {

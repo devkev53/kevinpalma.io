@@ -80,17 +80,14 @@ const t = useTranslations(lang);
     padding: 4rem 1rem;
     border-top-right-radius: 4rem;
     border-bottom-left-radius: 4rem;
-
-    view-timeline-name: --infoContent;
-    view-timeline-axis: block;
-
-    animation-timeline: --infoContent;
-    animation-name: show;
+    /* transform: translateX(-100vw); */
+    opacity: 0;
   }
   .title {
     font-size: clamp(3.8rem, 5vw, 6.5rem);
-    /* opacity: 0; */
     text-shadow: 0 0 .1rem rgba(0,0,0, 1);
+    transition: .5s all ease-in;
+    opacity: 0;
   }
   .pictureWrapper {
     height: clamp(22rem, 30vw, 40rem);
@@ -99,6 +96,8 @@ const t = useTranslations(lang);
     margin-bottom: -5rem;
     order: 1;
     filter: drop-shadow(.5rem .5rem 1rem rgba(0,0,0,.7));
+    transform: scale(0);
+    opacity: 0;
   }
   .myPicture {
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
