@@ -1,0 +1,49 @@
+.homeContainer {
+  /* background: red; */
+  width: 100%;
+  height: auto;
+}
+
+.containerImg {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-self: center;
+  padding: 12rem 0 5rem 0;
+}
+
+.containerBtnCV {
+  display: flex;
+  justify-content: center;
+}
+
+.home_text2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--royal-purple);
+}
+
+.containerBtnCV button {
+  background: var(--royal-purple);
+  border-radius: 3rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin: 2rem 0;
+  border: none;
+  cursor: pointer;
+}
+.containerBtnCV button:hover {
+  background: red;
+  box-shadow: 0px 9px 15px -1px rgba(0,0,0,0.20);
+  transition: all .4s ease;
+}
+
+
+@media (min-width: 760) {
+  .container {
+    display: none;
+  }
+}
