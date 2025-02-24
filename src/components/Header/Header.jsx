@@ -23,38 +23,43 @@ const Header = () => {
       <div className={styles.logoContainer}>
         <Logo/>
       </div>
-
-       <nav className={`
-          ${ styles.nav}
-          ${isActive && styles.navActive}
-        `}>
-        <a href="#Home" className={styles.active}>
-          Home
-        </a>
-        <a href="">
-          Sobre mí
-        </a>
-        <a href="">
-          Habilidades
-        </a>
-        <a href="">
-          Formación
-        </a>
-        <a href="">
-          Proyectos
-        </a>
-        <a href="">
-          Contacto
-        </a>
-        <div className={styles.flagsContainer}>
-          <div className={styles.flag_item}>
-            <img src={spainFlag} alt="spain_flag" />
+      
+      <div className={`
+            ${ styles.navWrapper}
+            ${isActive && styles.navWrapperActive}
+      `}>
+        <nav className={`
+            ${ styles.nav}
+          `}>
+          <a href="#Home" className={styles.active}>
+            Home
+          </a>
+          <a href="">
+            Sobre mí
+          </a>
+          <a href="">
+            Habilidades
+          </a>
+          <a href="">
+            Formación
+          </a>
+          <a href="">
+            Proyectos
+          </a>
+          <a href="">
+            Contacto
+          </a>
+          <div className={styles.flagsContainer}>
+            <div className={styles.flag_item}>
+              <img src={spainFlag} alt="spain_flag" />
+            </div>
+            <div className={styles.flag_item}>
+              <img src={ukFlag} alt="unitedKindog_flag" />
+            </div>
           </div>
-          <div className={styles.flag_item}>
-            <img src={ukFlag} alt="unitedKindog_flag" />
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
+      
       <BurgerBtn/>
     </header>
   )

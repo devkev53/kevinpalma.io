@@ -1,0 +1,107 @@
+:root {
+  --linkedin: #0E76A8;
+  --github:#8d0042;
+  --youtube:rgb(195, 53, 46);
+  --x:#fafafa;
+  --codepen:#e97c00;
+}
+.socialLink {
+  display: flex;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+  transition: .4s ease;
+}
+.socialLink button {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: .4rem;
+  position: relative;
+  cursor: pointer;
+  background: rgba(var(--alabaster));
+  border: .2rem solid rgba(var(--alabaster));
+  border-radius: 100%;
+  transition: .4s ease;
+  
+}
+.socialLink svg {
+  height: auto;
+  color: rgba(var(--eerie-black));
+  transition: .4s ease;
+}
+.socialLink button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(var(--alabaster));
+  border-radius: 50%;
+  transform: scale(1.2);
+  animation: animatedSocials 2s forwards;
+  z-index: -1;
+}
+
+.socialLink:hover {
+  transform: scale(1.2);
+}
+.socialLink:hover.linkendin:hover button {
+  border: .2rem solid var(--linkedin);
+  box-shadow: 0px 0px 10px 1px var(--linkedin);
+}
+.socialLink:hover.linkendin svg {
+  color: var(--linkedin);
+  transition: .3s all ease;
+}
+.socialLink:hover.linkendin button::after {
+  background: var(--linkedin);
+  transform: scale(1.6);
+}
+
+.socialLink:hover.youtube:hover button {
+  border: .2rem solid var(--youtube);
+  box-shadow: 0px 0px 10px 1px var(--youtube);
+}
+.socialLink:hover.youtube svg {
+  color: var(--youtube);
+  transition: .3s all ease;;
+}
+.socialLink:hover.youtube button::after {
+  background: var(--youtube);
+  transform: scale(1.6);
+}
+
+.socialLink:hover.codepen button{
+  border: .2rem solid var(--codepen);
+  box-shadow: 0px 0px 10px 1px var(--codepen);
+}
+.socialLink:hover.codepen svg{
+  color: var(--codepen);
+}
+
+.socialLink:hover.github button{
+  border: .2rem solid var(--github);
+  box-shadow: 0px 0px 10px 1px var(--github);
+}
+.socialLink:hover.github svg{
+  color: var(--github);
+}
+
+@keyframes animatedSocials {
+  0% { transform: scale(1)}
+  50% {transform: scale(1.1)}
+  100% {transform: scale(1)}
+}
+
+
+@media (min-width: 980px) {
+  .socialLink {
+    height: 3rem;
+    width: 3rem;
+  }
+  .socialLink button {
+    padding: .5rem;
+  }
+}

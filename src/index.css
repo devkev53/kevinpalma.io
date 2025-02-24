@@ -1,22 +1,26 @@
+@font-face {
+  font-family: advent;
+  src: url('../public/fonts/AdventPro.woff2');
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--alabaster);
-  background-color: var(--eerie-black);
+  color: rgba(var(--alabaster));
+  background-color: rgba(var(--eerie-black));
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --eerie-black: #1F1F1F;
-  --jet: #292929;
-  --royal-purple: #7851B1;
-  --xanthous:#E6AF2E;
-  --alabaster:#E0E2DB;
+  --eerie-black: 31, 31, 31;
+  --jet: 41, 41, 41;
+  --royal-purple: 120, 81, 177;
+  --xanthous:230, 175, 46;
+  --alabaster: 224, 226, 219;
 }
 
 a {
@@ -38,29 +42,10 @@ h1 {
   line-height: 1.1;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--jet);
-    background-color: var(--alabaster);
+    background-color: rgba(var(--alabaster));
   }
   a:hover {
     color: var(--plum);
@@ -68,4 +53,34 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.btn {
+  display: flex;
+  width: min(100%, 26rem);
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: #000;
+  cursor: pointer;
+  transition: .2s;
+  border: .1rem solid transparent;
+  font-weight: bold;
+}
+.btn:hover {
+  box-shadow: 0px 0px 15px -1px rgba(0,0,0,.7);
+}
+.primaryBtn {
+  background: rgba(var(--royal-purple));
+  text-transform: uppercase;
+}
+.primaryBtn:hover {
+  background: rgba(var(--royal-purple),.5);
+}
+.secundaryBtn {
+  background: transparent;
+  border: .1rem solid rgba(var(--xanthous));
+  color: rgba(var(--xanthous));
+}
+.secundaryBtn:hover {
+  background: rgba(0,0,0,.3);
 }
