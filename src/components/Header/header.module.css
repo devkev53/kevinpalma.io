@@ -8,7 +8,13 @@
   z-index: 1;
   transition: .5s;
   align-items: center;
+  background: rgba(var(--jet));
+  box-shadow: 0 10px 16px -6px rgba(5,5,5, .9);
 }
+/* .header_container.down {
+  backdrop-filter: blur(1rem);
+  background: rgba(var(--jet),.7);  
+} */
 .logoContainer {
   width: 4.5rem;
   height: 4.5rem;
@@ -21,9 +27,9 @@
   display: flex;
   position: absolute;
   justify-content: flex-end;
-  top: 6.3rem;
   width: 100%;
   left: 100%;
+  top: 5.9rem;
   left: 0;
   height: calc(100vh - 6.3rem);
   background: rgba(3,3,3,.2);
@@ -32,7 +38,6 @@
 .navWrapperActive {
   display: flex;
   position: absolute;
-  top: 6.3rem;
   left: 0;
   backdrop-filter: blur(1rem);
   background: rgba(3,3,3,.7);
@@ -104,13 +109,18 @@
 }
 
 @media (min-width: 980px) {
+  .header_container.down {
+    background: rgba(var(--jet),.5);
+    backdrop-filter: blur(1.5rem);
+    box-shadow: 0 10px 16px -6px rgba(5,5,5, .3);
+  }
   .navWrapper, .navWrapperActive {
     display: flex;
     background: none;
     position: relative;
     height: auto;
     top: 0;
-    backdrop-filter: blur(0);
+    backdrop-filter: none;
     animation: none;
     box-shadow: none;
   }

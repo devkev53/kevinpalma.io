@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // Styles
 import styles from './header.module.css'
@@ -12,14 +12,26 @@ import ukFlag from '../../assets/uk.png'
 
 // Store
 import {useHeader} from '../../store/headerStore'
+import { useHeaderHook } from '../../hooks/useHeader'
 
 const Header = () => {
 
-  const {isActive, setIsActive} = useHeader(state=>state)
+  const {isActive, closeMenu} = useHeaderHook()
 
+  const headerRef = useRef()
+
+  const changeHeader = () => {
+    window.addEventListener('scroll', () => {
+      headerRef.current.classList.toggle(`${styles.down}`, scrollY>0)
+    })
+  }
+
+  useEffect(() => {
+    changeHeader()
+  },[])
 
   return (
-    <header className={styles.header_container}>
+    <header ref={headerRef} className={styles.header_container}>
       <div className={styles.logoContainer}>
         <Logo/>
       </div>
@@ -31,22 +43,22 @@ const Header = () => {
         <nav className={`
             ${ styles.nav}
           `}>
-          <a href="#Home" className={styles.active}>
+          <a onClick={closeMenu} href="#Home" className={styles.active}>
             Home
           </a>
-          <a href="">
+          <a onClick={closeMenu} href="#About">
             Sobre mí
           </a>
-          <a href="">
+          <a onClick={closeMenu} href="">
             Habilidades
           </a>
-          <a href="">
+          <a onClick={closeMenu} href="">
             Formación
           </a>
-          <a href="">
+          <a onClick={closeMenu} href="">
             Proyectos
           </a>
-          <a href="">
+          <a onClick={closeMenu} href="">
             Contacto
           </a>
           <div className={styles.flagsContainer}>

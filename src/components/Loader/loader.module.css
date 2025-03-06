@@ -1,0 +1,84 @@
+.show.wrapper {
+  display: flex;
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(var(--jet),.98);
+  position: fixed;
+  z-index: 99999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper picture {
+  height: 16rem;
+  width: 16rem;
+  border-radius: 100%;
+  padding: .5rem;
+  position: relative;
+  animation: .3s showIn forwards;
+}
+.wrapper picture::after {
+  height: calc(100%);
+  width: calc(100%);
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  position: absolute;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,212,255,0) 70%);
+  z-index: -1;
+  animation: .5s rotate infinite;
+}
+.wrapper picture::before {
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  content: "";
+  top: .5rem;
+  left: .5rem;
+  border-radius: 100%;
+  position: absolute;
+  background: #000;
+  z-index: 1;
+  /* animation: 1s opacity infinite; */
+}
+.wrapper picture svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: 4s pulse infinite;
+  /* animation: 1s opacity infinite; */
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(270deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2);}
+  100% { transform: scale(1);}
+}
+@keyframes showIn {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,14 +1,13 @@
 import React, { useCallback, useState } from 'react'
 import styles from './burgerBtn.module.css'
-// Store
-import {useHeader} from '../../store/headerStore'
 
+import { useHeaderHook } from '../../hooks/useHeader'
 const BurgerBtn = () => {
   
-  const {isActive, setIsActive} = useHeader(state=>state)
-    
-  const showMenu = () => {
-    setIsActive(!isActive)
+  const {isActive, openMenu, closeMenu} = useHeaderHook()
+
+  const handleMenu = () => {
+    isActive ? closeMenu() : openMenu()
   }
 
   return (
@@ -17,7 +16,7 @@ const BurgerBtn = () => {
         ${styles.button}
         ${isActive ? styles.active : styles.notActive}
       `}
-      onClick={showMenu}
+      onClick={handleMenu}
     >
       <span></span>
       <span></span>
