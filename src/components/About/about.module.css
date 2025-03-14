@@ -5,7 +5,7 @@
   font-size: clamp(1.8rem, 5vw, 2.2rem);
   border-bottom: .2rem solid rgba(var(--xanthous),.3);
 }
-.titleSecction {
+.titleSection {
   font-size: clamp(2.4rem, 5vw, 3.2rem);
 }
 .infoWrapper {
@@ -38,13 +38,22 @@
   object-fit: contain;
 }
 
+@media (min-width: 760px) {
+  .infoWrapper {
+    display: flex;
+  }
+  .textInfo {
+    width: 100%;
+  }
+}
+
 
 @media (min-width: 980px) {
-  .infoWrapper {
-    grid-auto-flow: column;
-    grid-template-columns: repeat(aut-fit, 1fr);
+  .about {
+    border-bottom: transparent;
   }
   .imgAbout {
+    width: 90%;
     order: 1;
     margin-left: 3rem;
   }

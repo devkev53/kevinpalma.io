@@ -1,13 +1,23 @@
 import React from 'react'
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // Styles
 import styles from './home.module.css'
 import { Link } from 'react-router-dom'
 // Images
 import imageTest from '../../assets/image-home-test.png'
 import SocialLinks from '../SocialLinks/SocialLinks'
+import { useEffect } from 'react';
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init();
+    console.log(AOS.init())
+  },[])
+
   return (
-    <section className={styles.homeContainer}>
+    <section id='Home' className={styles.homeContainer} data-aos="fade-left">
       <picture className={styles.containerImg}>
         <img src={imageTest} alt="Ilustracion Kevin Palma" />
       </picture>
@@ -17,7 +27,7 @@ const Home = () => {
         <p className={styles.home_text2}>Kevin Palma</p>
 
         <div>
-          <p className={styles.home_text3}>Magister Artium en Seguridad Informática</p>
+          <p className={`${styles.home_text3} ${styles.textType}`}>Magister Artium en Seguridad Informática</p>
         </div>
 
         <div className={styles.parrafo_info}>
@@ -39,7 +49,7 @@ const Home = () => {
       <div className={styles.links}>
         <SocialLinks/>
       </div>
-      
+
 
     </section>
   )

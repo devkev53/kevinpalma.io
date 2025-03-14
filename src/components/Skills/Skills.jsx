@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './skills.module.css'
 import htmlIcon from '../../assets/html5.svg'
 import css3Icon from '../../assets/css3.svg'
@@ -12,14 +12,25 @@ import githubIcon from '../../assets/github.svg'
 import dockerIcon from '../../assets/docker.svg'
 import postgresSqlIcon from '../../assets/postgresql.svg'
 import { SkillCard } from '../SkillCard'
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export const Skills = () => {
+  useEffect(() => {
+    AOS.init();
+    console.log(AOS.init())
+  },[])
   return (
-    <section id='skills' className={styles.skillsSecction}>
-      <h1 className={styles.titleSecction}>Sobre mí</h1>
+    <section
+      id='Skills'
+      className={styles.skillsSection}
+      data-aos="fade-up"
+    >
+      <h1 className={styles.titleSection}>Habilidades</h1>
       <div className={styles.cardsContainers}>
-        
+
         {/* HTML-5 */}
         <SkillCard
           name="HTML 5"
@@ -37,7 +48,7 @@ export const Skills = () => {
         />
 
         {/* JavaScript */}
-        <div className={`${styles.skillCard} ${styles.js}`}>
+        <div data-aos="fade-up" aos-duration="300" className={`${styles.skillCard} ${styles.js}`}>
           <picture>
             <img src={jsIcon} alt="Javascript Icon" />
           </picture>
@@ -45,7 +56,7 @@ export const Skills = () => {
         </div>
 
         {/* TypeScript */}
-        <div className={`${styles.skillCard} ${styles.ts}`}>
+        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.ts}`}>
           <picture>
             <img src={tsIcon} alt="TypeScript Icon" />
           </picture>
@@ -53,7 +64,7 @@ export const Skills = () => {
         </div>
 
         {/* React */}
-        <div className={`${styles.skillCard} ${styles.react}`}>
+        <div data-aos="fade-up" aos-duration="900" className={`${styles.skillCard} ${styles.react}`}>
           <picture>
             <img src={reactIcon} alt="React Icon" />
           </picture>
@@ -61,7 +72,7 @@ export const Skills = () => {
         </div>
 
         {/* Python */}
-        <div className={`${styles.skillCard} ${styles.python}`}>
+        <div data-aos="fade-up" aos-duration="1100" className={`${styles.skillCard} ${styles.python}`}>
           <picture>
             <img src={pythonIcon} alt="Python Icon" />
           </picture>
@@ -69,7 +80,7 @@ export const Skills = () => {
         </div>
 
         {/* Django */}
-        <div className={`${styles.skillCard} ${styles.django}`}>
+        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.django}`}>
           <picture>
             <img src={djangoIcon} alt="Django Icon" />
           </picture>
@@ -77,7 +88,7 @@ export const Skills = () => {
         </div>
 
         {/* Git */}
-        <div className={`${styles.skillCard} ${styles.git}`}>
+        <div data-aos="fade-up" aos-duration="700" className={`${styles.skillCard} ${styles.git}`}>
           <picture>
             <img src={gitIcon} alt="Git Icon" />
           </picture>
@@ -85,7 +96,7 @@ export const Skills = () => {
         </div> 
         
         {/* Github */}
-        <div className={`${styles.skillCard} ${styles.github}`}>
+        <div data-aos="fade-up" aos-duration="900" className={`${styles.skillCard} ${styles.github}`}>
           <picture>
             <img src={githubIcon} alt="Github Icon" />
           </picture>
@@ -93,7 +104,7 @@ export const Skills = () => {
         </div> 
 
         {/* docker */}
-        <div className={`${styles.skillCard} ${styles.docker}`}>
+        <div data-aos="fade-up" aos-duration="1100" className={`${styles.skillCard} ${styles.docker}`}>
           <picture>
             <img src={dockerIcon} alt="Docker Icon" />
           </picture>
@@ -101,7 +112,7 @@ export const Skills = () => {
         </div>
 
         {/* Git */}
-        <div className={`${styles.skillCard} ${styles.postgresql}`}>
+        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.postgresql}`}>
           <picture>
             <img src={postgresSqlIcon} alt="PostgreSql Icon" />
           </picture>

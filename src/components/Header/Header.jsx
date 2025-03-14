@@ -35,7 +35,7 @@ const Header = () => {
       <div className={styles.logoContainer}>
         <Logo/>
       </div>
-      
+
       <div className={`
             ${ styles.navWrapper}
             ${isActive && styles.navWrapperActive}
@@ -49,16 +49,16 @@ const Header = () => {
           <a onClick={closeMenu} href="#About">
             Sobre mí
           </a>
-          <a onClick={closeMenu} href="">
+          <a onClick={closeMenu} href="#Skills">
             Habilidades
           </a>
-          <a onClick={closeMenu} href="">
+          <a onClick={closeMenu} href="#Training">
             Formación
           </a>
-          <a onClick={closeMenu} href="">
+          <a onClick={closeMenu} href="#Projects">
             Proyectos
           </a>
-          <a onClick={closeMenu} href="">
+          <a onClick={closeMenu} href="#Contact">
             Contacto
           </a>
           <div className={styles.flagsContainer}>

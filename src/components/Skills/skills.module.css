@@ -9,42 +9,53 @@
   --docker: #2396ED;
   --postgres: #336791;
 }
-.skillsSecction {
+.skillsSection {
   padding: 3rem 0;
   display: grid;
   justify-content: center;
   grid-template-columns: 100%;
   width: 100%;
+  padding: 6rem 0 3rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+}
+.titleSection {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
 }
 .cardsContainers {
   justify-self: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
-  width: min(100%, 80rem);
+  gap: 4rem;
+  width: min(100%, 90rem);
   padding: 3rem;
 }
 .skillCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: flex-end;
   width: 14rem;
-  height: 15rem;
-  background: rgba(var(--royal-purple),.1);
-  border-radius: 1rem;
-  border: .2rem solid rgba(var(--royal-purple),.1);
-  /* transition: .4s ease; */
+  /* height: 14rem; */
+  background: rgba(var(--jet));
+  border-radius: 1.8rem;
+  gap: 1rem;
+  transition: .4s ease;
   overflow: hidden;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: .2rem solid rgba(0,0,0,.3);
+  /* background: red; */
 }
 .skillCard:hover {
-  animation: .4s cardHoverBorder ease forwards;
+  /* animation: .4s cardHoverBorder ease forwards; */
 }
 
 .skillCard picture {
+  /* width: 16rem; */
+  height: 9rem;
   padding: 1rem;
-  width: 14rem;
-  height: 11rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -58,27 +69,23 @@
   transition: .4s ease;
 }
 .skillCard:hover picture img {
-  transform: scale(.9);
+  transform: scale(1.2);
 }
 .skillCard p {
   position: relative;
   width: 100%;
   border: .3rem solid transparent;
   margin-top: auto;
-  color: #000;
-  /* border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem; */
   padding: .6rem;
-  /* background: #000; */
-  color: rgba(var(--alabaster));
   transition: .4s all ease;
-  /* border-top: .2rem solid rgba(var(--royal-purple)); */
+  z-index: 2;
+  color: rgba(var(--alabaster));
 }
-.skillCard p::after {
+.skillCard p::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 120%;
+  top: 0;
   left: -.5rem;
   height: 110%;
   width: 110%;
@@ -87,72 +94,79 @@
   transition: .4s ease;
   /* border-top: .2rem solid rgba(var(--xanthous),.7); */
 }
-.skillCard:hover p::after {
+.skillCard:hover p::before {
   top: 0;
+  z-index: -1;
 }
-
-.html p::after {
+.css picture,
+.html picture {
+  height: 10rem;
+}
+.html p::before {
   background: var(--html);
 }
-.css p::after {
+.css p::before {
   background: var(--css);
   color: rgba(255,255,255);
 }
-.skillCard.js:hover p {
+.skillCard.js p {
   color: rgba(0,0,0);
 }
-.js p::after {
+.js p::before {
   background: var(--js);
 }
-.ts p::after {
+.ts p::before {
   background: var(--ts);
   color: rgba(255,255,255);
 }
-.skillCard.react:hover p {
+.skillCard.react p {
   color: rgba(0,0,0);
 }
-.react p::after {
+.react p::before {
   background: var(--react);
   color: rgba(255,255,255);
 }
-.django p::after {
+.django p::before {
   background: var(--django);
   color: rgba(255,255,255);
 }
-.skillCard.python:hover p {
+.skillCard.python p {
   color: rgba(0,0,0);
 }
-.python p::after {
+.python p::before {
   background: rgb(55,115,165);
   background: linear-gradient(90deg, rgba(55,115,165,1) 0%, rgba(255,209,65,1) 100%);
 }
-.git p::after {
+.git p::before {
   background: var(--git);
 }
-.github p::after {
+.github p::before {
   background: rgb(var(--royal-purple));
   background: linear-gradient(90deg, rgb(0,0,0,.7) 0%, rgb(var(--royal-purple))  100%);
 }
-.skillCard.docker:hover p {
+.skillCard.docker p {
   color: rgba(0,0,0);
 }
-.docker p::after {
+.docker p::before {
   background: var(--docker)
 }
-.skillCard.postgresql:hover p {
+.skillCard.postgresql p {
   color: rgba(0,0,0);
 }
-.postgresql p::after {
+.postgresql p::before {
   background: rgb(var(--royal-purple));
   background: linear-gradient(90deg, var(--postgres) 25%, rgba(var(--alabaster)), 75%, rgb(0,0,0)  100%);
 }
 
 @keyframes cardHoverBorder {
   10% {
-    border: .2rem solid rgba(0,0,0);
+    border: .2rem solid rgba(0,0,0,.7);
   }
-  60% {
+  40% {
     border: .2rem solid rgba(0,0,0,.1);
+  }
+  70% {
+    border: .2rem solid rgba(var(--xanthous),.1);
   }
   100% {
     border: .2rem solid rgba(var(--xanthous),.7);

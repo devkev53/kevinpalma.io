@@ -1,0 +1,49 @@
+.projectsWrapper {
+  font-family: advent;
+  background: rgba(var(--eerie-black));
+  padding: 6rem 0 3rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  border-bottom: .2rem solid rgba(var(--xanthous),.3);
+}
+.titleSection {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+}
+.cardsContainer {
+  display: flex;
+  justify-self: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  width: min(100%, 160rem);
+  padding: 3rem;
+}
+.projectCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  background: rgba(var(--jet));
+  width: min(100%, 46rem);
+  text-align: left;
+  border: .2rem solid rgba(0,0,0,.3);
+}
+.projectInfo {
+  padding: 1rem 2rem;
+}
+.projectInfo p {
+  font-size: 1.4rem;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+.projectFooter {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  margin-top: auto;
+}
+.projectFooter button {
+  width: min-content;
+  border-radius: 1.2rem;
+}
