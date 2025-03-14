@@ -20,15 +20,13 @@ import 'aos/dist/aos.css';
 export const Skills = () => {
   useEffect(() => {
     AOS.init();
-    console.log(AOS.init())
   },[])
   return (
     <section
       id='Skills'
       className={styles.skillsSection}
-      data-aos="fade-up"
     >
-      <h1 className={styles.titleSection}>Habilidades</h1>
+      <h1 data-aos="fade-up" className={styles.titleSection}>Habilidades</h1>
       <div className={styles.cardsContainers}>
 
         {/* HTML-5 */}
@@ -37,6 +35,8 @@ export const Skills = () => {
           link="https://developer.mozilla.org/es/docs/Glossary/HTML5"
           iconPath={htmlIcon}
           skillStyle={styles.html}
+          effect="fade-up"
+          duration="300"
         />
 
         {/* CSS-3 */}
@@ -45,79 +45,99 @@ export const Skills = () => {
           link=""
           iconPath={css3Icon}
           skillStyle={styles.css}
+          effect="fade-up"
+          duration="500"
         />
 
         {/* JavaScript */}
-        <div data-aos="fade-up" aos-duration="300" className={`${styles.skillCard} ${styles.js}`}>
-          <picture>
-            <img src={jsIcon} alt="Javascript Icon" />
-          </picture>
-          <p>JavaScript</p>
-        </div>
+        <SkillCard
+          name="JavaScript"
+          link=""
+          iconPath={jsIcon}
+          skillStyle={`${styles.skillCard} ${styles.js}`}
+          effect="fade-up"
+          duration="700"
+        />
 
         {/* TypeScript */}
-        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.ts}`}>
-          <picture>
-            <img src={tsIcon} alt="TypeScript Icon" />
-          </picture>
-          <p>TypeScript</p>
-        </div>
+        <SkillCard
+          name="TypeScript"
+          link=""
+          iconPath={tsIcon}
+          skillStyle={`${styles.skillCard} ${styles.ts}`}
+          effect="fade-up"
+          duration="900"
+        />
 
         {/* React */}
-        <div data-aos="fade-up" aos-duration="900" className={`${styles.skillCard} ${styles.react}`}>
-          <picture>
-            <img src={reactIcon} alt="React Icon" />
-          </picture>
-          <p>React</p>
-        </div>
+        <SkillCard
+          name="ReactJs"
+          link=""
+          iconPath={reactIcon}
+          skillStyle={`${styles.skillCard} ${styles.react}`}
+          effect="fade-up"
+          duration="300"
+        />
 
         {/* Python */}
-        <div data-aos="fade-up" aos-duration="1100" className={`${styles.skillCard} ${styles.python}`}>
-          <picture>
-            <img src={pythonIcon} alt="Python Icon" />
-          </picture>
-          <p>Python</p>
-        </div>
+        <SkillCard
+          name="Python"
+          link=""
+          iconPath={pythonIcon}
+          skillStyle={`${styles.skillCard} ${styles.python}`}
+          effect="fade-up"
+          duration="500"
+        />
 
         {/* Django */}
-        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.django}`}>
-          <picture>
-            <img src={djangoIcon} alt="Django Icon" />
-          </picture>
-          <p>Django</p>
-        </div>
+        <SkillCard
+          name="Django"
+          link=""
+          iconPath={djangoIcon}
+          skillStyle={`${styles.skillCard} ${styles.django}`}
+          effect="fade-up"
+          duration="700"
+        />
 
         {/* Git */}
-        <div data-aos="fade-up" aos-duration="700" className={`${styles.skillCard} ${styles.git}`}>
-          <picture>
-            <img src={gitIcon} alt="Git Icon" />
-          </picture>
-          <p>Git</p>
-        </div> 
-        
+        <SkillCard
+          name="Git"
+          link=""
+          iconPath={gitIcon}
+          skillStyle={`${styles.skillCard} ${styles.git}`}
+          effect="fade-up"
+          duration="900"
+        />
+
         {/* Github */}
-        <div data-aos="fade-up" aos-duration="900" className={`${styles.skillCard} ${styles.github}`}>
-          <picture>
-            <img src={githubIcon} alt="Github Icon" />
-          </picture>
-          <p>Github</p>
-        </div> 
+        <SkillCard
+          name="Github"
+          link=""
+          iconPath={githubIcon}
+          skillStyle={`${styles.skillCard} ${styles.github}`}
+          effect="fade-up"
+          duration="300"
+        />
 
         {/* docker */}
-        <div data-aos="fade-up" aos-duration="1100" className={`${styles.skillCard} ${styles.docker}`}>
-          <picture>
-            <img src={dockerIcon} alt="Docker Icon" />
-          </picture>
-          <p>Docker</p>
-        </div>
+        <SkillCard
+          name="Docker"
+          link=""
+          iconPath={dockerIcon}
+          skillStyle={`${styles.skillCard} ${styles.docker}`}
+          effect="fade-up"
+          duration="500"
+        />
 
         {/* Git */}
-        <div data-aos="fade-up" aos-duration="500" className={`${styles.skillCard} ${styles.postgresql}`}>
-          <picture>
-            <img src={postgresSqlIcon} alt="PostgreSql Icon" />
-          </picture>
-          <p>PosgreSql</p>
-        </div>
+        <SkillCard
+          name="PosgreSql"
+          link=""
+          iconPath={postgresSqlIcon}
+          skillStyle={`${styles.skillCard} ${styles.postgresql}`}
+          effect="fade-up"
+          duration="700"
+        />
  
       </div>
     </section>

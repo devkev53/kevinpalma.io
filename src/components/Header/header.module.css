@@ -1,7 +1,7 @@
 .header_container {
   display: flex;
   height: 6rem;
-  width: 100%;
+  width: 100vw;
   position: relative;
   padding: .8rem 3rem;
   position: fixed;

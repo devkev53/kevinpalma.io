@@ -1,16 +1,49 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styles from './training.module.css'
 import UMGLogo from '../../assets/EscudoUMG.png'
 import Platzi from '../../assets/platzi.webp'
+import IntecapLogo from '../../assets/intecap.png'
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Training = () => {
+  useEffect(() => {
+    AOS.init();
+  },[])
   return (
     <section id='Training' className={styles.trainingWrapper}>
-      <h1 className={styles.titleSection}>Formación</h1>
+      <h1 data-aos="fade-up" className={styles.titleSection}>Formación</h1>
 
       <div className={styles.wrapperCards}>
 
-        <div className={styles.trainingCard}>
+        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
+          <picture>
+            <img src={IntecapLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
+          </picture>
+          <div className={styles.trainingCardGradeWrapper}>
+            <p className={styles.grade}>PREPARACION A LA CERTIFICACION DE MICROSOFT EXCEL 2019</p>
+            <p className={styles.time}>2025</p>
+          </div>
+          <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
+            Conocer Más
+          </a>
+        </div>
+
+        <div data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
+          <picture>
+            <img src={IntecapLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
+          </picture>
+          <div className={styles.trainingCardGradeWrapper}>
+            <p className={styles.grade}>Análisis de datos con Excel y Power BI (e-learning)</p>
+            <p className={styles.time}>2024</p>
+          </div>
+          <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
+            Conocer Más
+          </a>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={UMGLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
             <div className="">
@@ -28,7 +61,7 @@ export const Training = () => {
           </a>
         </div>
 
-        <div className={styles.trainingCard}>
+        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={UMGLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
             <div className="">
@@ -46,7 +79,7 @@ export const Training = () => {
           </a>
         </div>
 
-        <div className={styles.trainingCard}>
+        <div data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={Platzi} alt="Logo de platzi" />
           </picture>

@@ -20,6 +20,7 @@
 }
 .titleSection {
   font-size: clamp(2.4rem, 5vw, 3.2rem);
+  padding-bottom: 4rem;
 }
 .cardsContainers {
   justify-self: center;

@@ -7,6 +7,7 @@
 }
 .titleSection {
   font-size: clamp(2.4rem, 5vw, 3.2rem);
+  padding-bottom: 4rem;
 }
 .infoWrapper {
   display: grid;
@@ -22,9 +23,11 @@
   padding-top: 3rem;
   font-size: clamp(2.4rem, 5vw, 3.2rem);
   color: rgba(var(--xanthous));
+  text-align: left;
 }
 .textInfo p:nth-child(2),
-.textInfo p:nth-child(3) {
+.textInfo p:nth-child(3),
+.textInfo p:nth-child(4) {
   text-align: justify;
 }
 .imgAbout {

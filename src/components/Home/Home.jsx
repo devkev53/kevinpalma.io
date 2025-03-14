@@ -17,9 +17,9 @@ const Home = () => {
   },[])
 
   return (
-    <section id='Home' className={styles.homeContainer} data-aos="fade-left">
+    <section id='Home' className={styles.homeContainer}>
       <picture className={styles.containerImg}>
-        <img src={imageTest} alt="Ilustracion Kevin Palma" />
+        <img data-aos="zoom-in" src={imageTest} alt="Ilustracion Kevin Palma" />
       </picture>
 
       <div className={styles.home_info}>
@@ -27,11 +27,11 @@ const Home = () => {
         <p className={styles.home_text2}>Kevin Palma</p>
 
         <div>
-          <p className={`${styles.home_text3} ${styles.textType}`}>Magister Artium en Seguridad Informática</p>
+          {/* <p className={`${styles.home_text3} ${styles.textType}`}>Magister Artium en Seguridad Informática</p> */}
         </div>
 
-        <div className={styles.parrafo_info}>
-          <p>Estudiante de Estadistica y programación enfocada al Desarrollo Web Frontend. Como persona amante a los diseños intuitivos y estéticamente agradables busco crear proyectos que brinden la mejor experiencia para el usuario.</p>
+        <div className={styles.home_text4}>
+          <p>Me considero una persona proactiva apasionada por la tecnologia lo cual me ha llevado a realizar aprendizaje continuo, logrando obtener habilidades para la creacion de soluciones a problemas por medio de la tecnologia, asi mismo me considero de mentalidad abierata y adaptable, listo para asumir nuevos retos y poder expandir las habilidades.</p>
         </div>
 
         <div className={styles.containerBtn}>
