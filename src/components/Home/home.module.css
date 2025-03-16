@@ -18,9 +18,10 @@
   display: flex;
   justify-content: center;
   padding: 10rem 3rem;
+  padding-bottom: 6rem;
 }
 .containerImg img {
-  width: min(80%, 65rem);
+  width: min(90%, 75rem);
   /* max-width: 65%; */
   object-fit: contain;
 }

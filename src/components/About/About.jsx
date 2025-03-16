@@ -6,18 +6,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const About = () => {
-  const {isNearScreen, ref} = useNearScreen({distance:'-300px'})
 
   useEffect(() => {
     AOS.init();
-    console.log(AOS.init())
   },[])
 
   return (
     <section
       id='About'
-      ref={ref}
-      className={`${styles.about} ${isNearScreen && styles.animate}`}
+      className={`${styles.about}`}
     >
       <h1 data-aos="fade-up" className={styles.titleSection}>Sobre mí</h1>
 

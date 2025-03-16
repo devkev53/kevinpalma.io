@@ -7,6 +7,7 @@ import Loader from './components/Loader/Loader'
 import { Skills } from './components/Skills/Skills'
 import { Training } from './components/Training/Training'
 import { Projects } from './components/Projects/Projects'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <Skills/>
       <Training/>
       <Projects/>
+      <Footer/>
     </>
   )
 }

@@ -1,0 +1,23 @@
+.footerLinks {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2rem;
+}
+.footerInfo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+.footerInfo p {
+  display: flex;
+  /* font-size: 1.2rem; */
+}
+.footerInfo img {
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0 .6rem;
+  margin-top: .4rem;
+}

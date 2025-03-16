@@ -9,11 +9,13 @@ import { Link } from 'react-router-dom'
 import imageTest from '../../assets/image-home-test.png'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import { useEffect } from 'react';
+// Icons
+import { MdSimCardDownload } from "react-icons/md";
+
 const Home = () => {
 
   useEffect(() => {
     AOS.init();
-    console.log(AOS.init())
   },[])
 
   return (
@@ -36,12 +38,15 @@ const Home = () => {
 
         <div className={styles.containerBtn}>
           <a href="" className={styles.homeBtn}>
-            <button className='btn primaryBtn'>Descargar CV</button>
+            <button className='btn primaryBtn'>
+              <i><MdSimCardDownload/></i>
+              <span>Descargar CV</span>
+            </button>
           </a>
 
-          <a href="" className={styles.homeBtn}>
+          {/* <a href="" className={styles.homeBtn}>
             <button className='btn secundaryBtn'>Contacto</button>
-          </a>
+          </a> */}
         </div>
 
       </div>

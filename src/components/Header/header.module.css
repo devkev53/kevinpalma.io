@@ -55,7 +55,7 @@
   background: var(--jet);
   box-shadow: 0 10px 16px -6px rgba(5,5,5, .3);
 }
- 
+
 .nav a {
   padding: 2rem;
   letter-spacing: .1rem;
@@ -63,6 +63,10 @@
   font-size: 1.8rem;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .nav .active {
   background: #333;
@@ -137,6 +141,16 @@
     padding: .5rem;
     margin-right: 2.5rem;
     border: .1rem solid transparent;
+    align-items: center;
+    width: auto;
+  }
+  .nav a i {
+    width: 1.4rem;
+    height: 1.4rem;
+    color: rgba(var(--alabaster),.5);
+  }
+  .nav a:hover i {
+    color: rgba(var(--xanthous),.5);
   }
   .nav a:hover {
     transition: .4s all ease;
@@ -146,14 +160,20 @@
   .nav .active {
     background: none;
     border-bottom: .1rem solid rgba(var(--xanthous));
+    color: rgba(var(--xanthous));
   }
   .nav .flagsContainer {
     /* height: 2.5rem; */
+    width: auto;
+    margin-right: 3rem;
   }
   .nav .flagsContainer div {
     display: flex;
     height: 100%;
     width: 2.5rem;
     padding: 0;
+  }
+  .nav .active i {
+    color: rgba(var(--xanthous));
   }
 }
