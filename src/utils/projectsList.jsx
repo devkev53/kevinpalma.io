@@ -12,9 +12,9 @@ export const PROJECTS = [
     id: 1,
     title: "FarmApp",
     description: "Esta es una aplicación web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de electroválvulas enviando la orden al módulo WiFi + Bluethooth SP32, este se puede realizar manual o automatizar, de igual manera cuenta con impresión de reportes.",
-    demoLink: "",
+    demoLink: "https://farmapp-devkev53.vercel.app/login",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/farmapp",
     imageList: {
       desktop: [farmappD1, farmappD2, farmappD3],
       mobile: [farmappM1, farmappM2, farmappM3],
@@ -26,7 +26,7 @@ export const PROJECTS = [
     description: "Aplicación web para la administración de empresas y empleados, cuenta con una tienda interna de la cual se puede vender a los usuarios y se descuenta las cuotas o pagos de la nómina de los empleados, impresión de boleta de nóminas y bonos.",
     demoLink: "https://ccardona.pythonanywhere.com/login",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/nomapp",
     imageList: {
       desktop:[],
       mobile:[]
@@ -36,33 +36,33 @@ export const PROJECTS = [
     id: 3,
     title: "Horus",
     description: "Aplicación web creada para la administración de un taller mecánico, el cual cuenta con módulo de ventas, clientes, productos, proveedores compras y empleados, así como la impresión de boletas de compra.",
-    demoLink: "",
+    demoLink: "https://xtestuser.pythonanywhere.com/",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/horus",
     imageList: {
       desktop:[],
       mobile:[]
     },
   },
-  {
-    id: 4,
-    title: "SICAME",
-    description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
-    demoLink: "",
-    imageUrl: farmAppImg,
-    repoLink: "",
-    imageList: {
-      desktop:[],
-      mobile:[]
-    },
-  },
+  // {
+  //   id: 4,
+  //   title: "SICAME",
+  //   description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
+  //   demoLink: "",
+  //   imageUrl: farmAppImg,
+  //   repoLink: "",
+  //   imageList: {
+  //     desktop:[],
+  //     mobile:[]
+  //   },
+  // },
   {
     id: 5,
     title: "BGRemove",
-    description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
-    demoLink: "",
+    description: "Es una aplicación creada para participar en la Hackathon realizada por Midudev, desarrollador español con gran trayectoria, comparte conocimientos en su canal en Twitch con más de 178K en seguidores, para esta se utilizó tecnología de Cloudinary, y su función es poder remover el fondo de las imágenes subidas al servicio de Cloudinary.",
+    demoLink: "https://bg-picremove.vercel.app/",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/bg-picremove",
     imageList: {
       desktop:[],
       mobile:[]
@@ -71,10 +71,10 @@ export const PROJECTS = [
   {
     id: 6,
     title: "SearchGyf",
-    description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
-    demoLink: "",
+    description: "Aplicación web que se realizó como proyecto propuesto por el español Midudev, para conocer el funcionamiento y aprendizaje de ReactJs, consumiendo al API gratuita proporcionada por GIPHY, se aplicó el scroll infinito implementando un observar para no cargar y saturar la página, intentando realizar un tipo de Lazy Loading, usando Hooks personalizados y contexto para el manejo del tema de la aplicación.",
+    demoLink: "https://searchphy.vercel.app/",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/react-searchgyf",
     imageList: {
       desktop:[],
       mobile:[]

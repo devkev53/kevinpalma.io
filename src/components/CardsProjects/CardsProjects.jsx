@@ -46,14 +46,18 @@ export const CardsProjects = ({
         </div>
         <div className={styles.technologies}></div>
         <div className={styles.projectFooter}>
-          <a target='_blank' href={demoLink} className="btn secondaryBtn">
-            <i><FaChrome/></i>
-            <span>Demo</span>
-          </a>
-          <a target='_blank' href={repoLink} className="btn primaryBtn">
-            <i><FaGithubAlt/></i>
-            <span>Repo</span>
-          </a>
+          {demoLink.length > 0 && (
+            <a target='_blank' href={demoLink} className="btn secondaryBtn">
+              <i><FaChrome/></i>
+              <span>Demo</span>
+            </a>
+          )}
+          {repoLink.length > 0 && (
+            <a target='_blank' href={repoLink} className="btn primaryBtn">
+              <i><FaGithubAlt/></i>
+              <span>Repo</span>
+            </a>
+          )}
         </div>
       </div>
     </>
