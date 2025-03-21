@@ -37,7 +37,7 @@ export const CardsProjects = ({
         className={styles.projectCardWrapper}
       >
         <picture className={styles.pictureImages} onClick={()=>setShowImages(true)}>
-          <img src={example} alt="Screen App" />
+          <img src={`${imageList.desktop.length>0 ? imageList.desktop[0]:example}`} alt="Screen App" />
           <i><FaRegImages/></i>
         </picture>
         <div className={styles.projectInfo}>

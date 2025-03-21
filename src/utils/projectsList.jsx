@@ -7,12 +7,46 @@ import farmappM1 from '../assets/projects/farmapp/mobile/1.png'
 import farmappM2 from '../assets/projects/farmapp/mobile/2.png'
 import farmappM3 from '../assets/projects/farmapp/mobile/3.png'
 
+import nomappD1 from '../assets/projects/nomapp/desktop/1.png'
+import nomappD2 from '../assets/projects/nomapp/desktop/2.png'
+import nomappD3 from '../assets/projects/nomapp/desktop/3.png'
+import nomappM1 from '../assets/projects/nomapp/mobile/1.png'
+import nomappM2 from '../assets/projects/nomapp/mobile/2.png'
+import nomappM3 from '../assets/projects/nomapp/mobile/3.png'
+
+import horusD1 from '../assets/projects/horus/desktop/1.png'
+import horusD2 from '../assets/projects/horus/desktop/2.png'
+import horusD3 from '../assets/projects/horus/desktop/3.png'
+import horusM1 from '../assets/projects/horus/mobile/1.png'
+import horusM2 from '../assets/projects/horus/mobile/2.png'
+import horusM3 from '../assets/projects/horus/mobile/3.png'
+
+import bgremoveD1 from '../assets/projects/bgremove/desktop/1.png'
+import bgremoveD2 from '../assets/projects/bgremove/desktop/2.png'
+import bgremoveD3 from '../assets/projects/bgremove/desktop/3.png'
+import bgremoveM1 from '../assets/projects/bgremove/mobile/1.png'
+import bgremoveM2 from '../assets/projects/bgremove/mobile/2.png'
+import bgremoveM3 from '../assets/projects/bgremove/mobile/3.png'
+
+import searchgyfD1 from '../assets/projects/searchgyf/desktop/1.png'
+import searchgyfD2 from '../assets/projects/searchgyf/desktop/2.png'
+import searchgyfM1 from '../assets/projects/searchgyf/mobile/1.png'
+import searchgyfM2 from '../assets/projects/searchgyf/mobile/2.png'
+
+import batatabitD1 from '../assets/projects/batatabit/desktop/1.png'
+import batatabitD2 from '../assets/projects/batatabit/desktop/2.png'
+import batatabitD3 from '../assets/projects/batatabit/desktop/3.png'
+import batatabitM1 from '../assets/projects/batatabit/mobile/1.png'
+import batatabitM2 from '../assets/projects/batatabit/mobile/2.png'
+import batatabitM3 from '../assets/projects/batatabit/mobile/3.png'
+
+
 export const PROJECTS = [
   {
     id: 1,
     title: "FarmApp",
     description: "Esta es una aplicación web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de electroválvulas enviando la orden al módulo WiFi + Bluethooth SP32, este se puede realizar manual o automatizar, de igual manera cuenta con impresión de reportes.",
-    demoLink: "https://farmapp-devkev53.vercel.app/login",
+    demoLink: "https://farmapp.vercel.app/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/farmapp",
     imageList: {
@@ -28,8 +62,8 @@ export const PROJECTS = [
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/nomapp",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [nomappD1, nomappD2, nomappD3],
+      mobile: [nomappM1, nomappM2, nomappM3],
     },
   },
   {
@@ -40,8 +74,8 @@ export const PROJECTS = [
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/horus",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [horusD1, horusD2, horusD3],
+      mobile: [horusM1, horusM2, horusM3],
     },
   },
   // {
@@ -64,8 +98,8 @@ export const PROJECTS = [
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/bg-picremove",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [bgremoveD1, bgremoveD2, bgremoveD3],
+      mobile: [bgremoveM1, bgremoveM2, bgremoveM3],
     },
   },
   {
@@ -76,8 +110,8 @@ export const PROJECTS = [
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/react-searchgyf",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [searchgyfD1, searchgyfD2],
+      mobile: [searchgyfM1, searchgyfM2],
     },
   },
   {
@@ -100,8 +134,8 @@ export const PROJECTS = [
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/CursoMobileFirts.github.io?tab=readme-ov-file",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [batatabitD1, batatabitD2, batatabitD3],
+      mobile: [batatabitM1, batatabitM2, batatabitM3],
     },
   },
 ];
