@@ -7,6 +7,7 @@ import styles from './home.module.css'
 import { Link } from 'react-router-dom'
 // Images
 import imageTest from '../../assets/image-home-test.png'
+import imgHome from '../../assets/image-home.svg'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import { useEffect } from 'react';
 // Icons
@@ -21,7 +22,7 @@ const Home = () => {
   return (
     <section id='Home' className={styles.homeContainer}>
       <picture className={styles.containerImg}>
-        <img data-aos="zoom-in" src={imageTest} alt="Ilustracion Kevin Palma" />
+        <img data-aos="zoom-in" src={imgHome} alt="Ilustracion Kevin Palma" />
       </picture>
 
       <div className={styles.home_info}>

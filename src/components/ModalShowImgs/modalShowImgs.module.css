@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  width: min(100%, 1fr);
   height: 100%;
   display: flex;
 }
@@ -45,10 +45,12 @@
   height: calc(100vh - 12rem);
   background: rgba(var(--eerie-black), .7);
   margin-bottom: auto;
+  border-radius: 1.2rem;
 }
 .container picture img {
   height: 100%;
   object-fit: contain;
+  border-radius: 1.2rem;
 }
 .previousBtn {
   left: 2rem;

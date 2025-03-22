@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from './about.module.css'
+import imgAbout from '../../assets/image-about.svg'
 import {useNearScreen} from '../../hooks/useNearScreen'
 // AOS
 import AOS from 'aos';
@@ -26,7 +27,7 @@ const About = () => {
           <p>En lo personal considero que una persona exitosa no solo debe contener habilidades tecnicas, si no que estas se deben acompañar de habilidades blandas, en lo personal creo que cuento con comunicacion clara, trabajo en equipo, adaptacion al cambio y resolucion de problemas.</p>
         </div>
         <picture className={styles.imgAbout}>
-          <img src="https://github.com/mariasmoUN/portafolio/blob/main/assets/images/image-sobreMi.png?raw=true" alt="aboutMeImg" />
+          <img src={imgAbout} alt="aboutMeImg" />
         </picture>
       </div>
     </section>

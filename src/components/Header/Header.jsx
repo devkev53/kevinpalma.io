@@ -81,14 +81,14 @@ const Header = () => {
           {/* <a onClick={closeMenu} href="#Contact">
             Contacto
           </a> */}
-          <div className={styles.flagsContainer}>
+          {/* <div className={styles.flagsContainer}>
             <div className={styles.flag_item}>
               <img src={spainFlag} alt="spain_flag" />
             </div>
             <div className={styles.flag_item}>
               <img src={ukFlag} alt="unitedKindog_flag" />
             </div>
-          </div>
+          </div> */}
         </nav>
       </div>
       <BurgerBtn/>

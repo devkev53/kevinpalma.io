@@ -33,6 +33,13 @@ import searchgyfD2 from '../assets/projects/searchgyf/desktop/2.png'
 import searchgyfM1 from '../assets/projects/searchgyf/mobile/1.png'
 import searchgyfM2 from '../assets/projects/searchgyf/mobile/2.png'
 
+import devterD1 from '../assets/projects/devter/desktop/1.png'
+import devterD2 from '../assets/projects/devter/desktop/2.png'
+import devterD3 from '../assets/projects/devter/desktop/3.png'
+import devterM1 from '../assets/projects/devter/mobile/1.png'
+import devterM2 from '../assets/projects/devter/mobile/2.png'
+import devterM3 from '../assets/projects/devter/mobile/3.png'
+
 import batatabitD1 from '../assets/projects/batatabit/desktop/1.png'
 import batatabitD2 from '../assets/projects/batatabit/desktop/2.png'
 import batatabitD3 from '../assets/projects/batatabit/desktop/3.png'
@@ -117,19 +124,19 @@ export const PROJECTS = [
   {
     id: 7,
     title: "Devter",
-    description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
+    description: "Esta aplicación web se realizó como un proyecto de practica para conocer NEXTJS, en un curso gratuito de Midudev, utilizando como base de datos SUPABASE, así como su integración de inicio de sesión con Github, el enfoque principal es realizar una aplicación tipo X en donde se pueda devitear con otros desarrolladores.",
     demoLink: "",
     imageUrl: farmAppImg,
-    repoLink: "",
+    repoLink: "https://github.com/devkev53/devter",
     imageList: {
-      desktop:[],
-      mobile:[]
+      desktop: [devterD1, devterD2, devterD3],
+      mobile: [devterM1, devterM2, devterM3],
     },
   },
   {
     id: 8,
     title: "BatataBit Landing Page",
-    description: "Esta es una aplicacion web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de elctrovalvulas enviando la orden al modulo wi-fi+bluethooth SP32, este se puede realizar manual o automatizar.",
+    description: "Batatabit es una landinpage desarrollada en un curso de Platzi en la cual se implementaba el desarrollo mobile first, siendo el tema principal conocer las bondades de este tipo de desarrollo lo cual evita que se termine rompiendo todo al abrir las aplicaciones en distintos tamaños de pantallas.",
     demoLink: "https://devkev53.github.io/CursoMobileFirts.github.io/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/CursoMobileFirts.github.io?tab=readme-ov-file",
