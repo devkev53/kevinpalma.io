@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './projects.module.css'
+import styles from '../../styles/projects.module.css'
 import farmApp from '../../../public/assets/farmApp.png'
 import example from '../../../public/assets/farmApp.png'
 import { FaChrome, FaGithubAlt, FaRegImages } from "react-icons/fa";

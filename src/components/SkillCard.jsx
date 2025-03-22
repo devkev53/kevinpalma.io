@@ -1,4 +1,4 @@
-import styles from './Skills/skills.module.css'
+import styles from '../styles/skills.module.css'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';

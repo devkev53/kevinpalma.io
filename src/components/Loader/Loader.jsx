@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Logo from '../Logo/Logo'
-import styles from './loader.module.css' 
+import styles from '../../styles/loader.module.css' 
 const Loader = () => {
   const [show, setShow] = useState(false)
   useEffect(()=> {

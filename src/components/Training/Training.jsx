@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import styles from './training.module.css'
+import styles from '../../styles/training.module.css'
 import UMGLogo from '../../../public/assets/EscudoUMG.png'
 import Platzi from '../../../public/assets/platzi.webp'
 import IntecapLogo from '../../../public/assets/intecap.png'

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import farmApp from '../../../public/assets/projects/farmapp/desktop/1.png'
-import styles from './cardProject.module.css'
+import styles from '../../styles/cardProject.module.css'
 import { FaChrome, FaGithubAlt, FaRegImages } from "react-icons/fa";
 import { useState } from 'react';
 import { ModalShowImgs } from '../ModalShowImgs/ModalShowImgs';

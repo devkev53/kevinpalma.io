@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from './about.module.css'
+import styles from '../../styles/about.module.css'
 import imgAbout from '../../../public/assets/image-about.svg'
 
 // AOS

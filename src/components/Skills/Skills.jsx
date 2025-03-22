@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from './skills.module.css'
+import styles from '../../styles/skills.module.css'
 import htmlIcon from '../../../public/assets/html5.svg'
 import css3Icon from '../../../public/assets/css3.svg'
 import jsIcon from '../../../public/assets/javascript.svg'

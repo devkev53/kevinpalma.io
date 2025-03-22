@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 // Styles
-import styles from './header.module.css'
+import styles from '../../styles/header.module.css'
 // Components
 import BurgerBtn from '../BurgerBtn/BurgerBtn'
 import Logo from '../Logo/Logo'

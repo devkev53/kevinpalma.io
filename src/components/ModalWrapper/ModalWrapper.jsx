@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom"
-import styles from './modal.module.css'
+import styles from './../../styles/modal.module.css'
 
 export const ModalWrapper = ({children}) => {
   const portal = window.document.querySelector("#portal")

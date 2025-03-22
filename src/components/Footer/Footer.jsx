@@ -1,7 +1,7 @@
 import React from 'react'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import reactImg from '../../../public/assets/react.svg'
-import styles from './footer.module.css'
+import styles from '../../styles/footer.module.css'
 
 export const Footer = () => {
   return (

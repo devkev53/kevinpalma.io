@@ -3,7 +3,7 @@ import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Styles
-import styles from './home.module.css'
+import styles from '../../styles/home.module.css'
 import { Link } from 'react-router-dom'
 // Images
 import imgHome from '../../../public/assets/image-home.svg'

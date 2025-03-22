@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import styles from './burgerBtn.module.css'
+import styles from '../../styles/burgerBtn.module.css'
 
 import { useHeaderHook } from '../../hooks/useHeader'
 const BurgerBtn = () => {
