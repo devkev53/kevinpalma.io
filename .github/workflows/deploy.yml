@@ -19,7 +19,7 @@ jobs:
         run: npm run buld
       
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-actions@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: production
           folder: dist
