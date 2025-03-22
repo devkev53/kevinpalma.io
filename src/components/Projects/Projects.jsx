@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './projects.module.css'
-import farmApp from '../../assets/farmApp.png'
-import example from '../../assets/example.png'
+import farmApp from '../../../public/assets/farmApp.png'
+import example from '../../../public/assets/farmApp.png'
 import { FaChrome, FaGithubAlt, FaRegImages } from "react-icons/fa";
 import { CardsProjects } from '../CardsProjects/CardsProjects';
 import { PROJECTS } from '../../utils/projectsList';

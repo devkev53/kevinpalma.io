@@ -6,8 +6,7 @@ import 'aos/dist/aos.css';
 import styles from './home.module.css'
 import { Link } from 'react-router-dom'
 // Images
-import imageTest from '../../assets/image-home-test.png'
-import imgHome from '../../assets/image-home.svg'
+import imgHome from '../../../public/assets/image-home.svg'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import { useEffect } from 'react';
 // Icons

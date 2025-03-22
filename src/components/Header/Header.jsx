@@ -7,8 +7,8 @@ import BurgerBtn from '../BurgerBtn/BurgerBtn'
 import Logo from '../Logo/Logo'
 
 // Images
-import spainFlag from '../../assets/spain.png'
-import ukFlag from '../../assets/uk.png'
+import spainFlag from '../../../public/assets/spain.png'
+import ukFlag from '../../../public/assets/uk.png'
 
 // Store
 import {useHeader} from '../../store/headerStore'

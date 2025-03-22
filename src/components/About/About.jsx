@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from './about.module.css'
-import imgAbout from '../../assets/image-about.svg'
-import {useNearScreen} from '../../hooks/useNearScreen'
+import imgAbout from '../../../public/assets/image-about.svg'
+
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';

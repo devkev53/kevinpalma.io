@@ -1,7 +1,7 @@
 import React from 'react'
 import { ModalWrapper } from '../ModalWrapper/ModalWrapper'
 import { MdNavigateNext, MdNavigateBefore, MdOutlineClose} from "react-icons/md";
-import notImg from '../../assets/notImg.png'
+import notImg from '../../../public/assets/notImg.png'
 import styles from './modalShowImgs.module.css'
 import { useState } from 'react';
 import { useEffect } from 'react';

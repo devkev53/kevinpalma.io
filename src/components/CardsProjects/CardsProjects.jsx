@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
-import farmApp from '../../assets/farmApp.png'
+import farmApp from '../../../public/assets/projects/farmapp/desktop/1.png'
 import styles from './cardProject.module.css'
 import { FaChrome, FaGithubAlt, FaRegImages } from "react-icons/fa";
 import { useState } from 'react';
 import { ModalShowImgs } from '../ModalShowImgs/ModalShowImgs';
 import { useCallback } from 'react';
-import example from '../../assets/example.png'
+import example from '../../../public/assets/example.png'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';

@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import styles from './training.module.css'
-import UMGLogo from '../../assets/EscudoUMG.png'
-import Platzi from '../../assets/platzi.webp'
-import IntecapLogo from '../../assets/intecap.png'
+import UMGLogo from '../../../public/assets/EscudoUMG.png'
+import Platzi from '../../../public/assets/platzi.webp'
+import IntecapLogo from '../../../public/assets/intecap.png'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
