@@ -1,0 +1,25 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - production
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Packages
+        run: npm ci
+
+      - name: Bundle
+        run: npm run buld
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-actions@v4
+        with:
+          branch: production
+          folder: dist
