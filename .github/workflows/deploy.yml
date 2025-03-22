@@ -19,7 +19,7 @@ jobs:
         run: pnpm i
 
       - name: Bundle
-        run: npm run buld
+        run: pnpm run buld
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
