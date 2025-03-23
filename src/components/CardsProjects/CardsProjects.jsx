@@ -9,6 +9,7 @@ import example from '../../../public/assets/example.png'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 
 export const CardsProjects = ({
@@ -17,6 +18,7 @@ export const CardsProjects = ({
 }) => {
 
   const [showImages, setShowImages] = useState(false)
+  const {t} = useTranslation()
 
   const closeModal  =  () => {
     setShowImages(false)
@@ -42,7 +44,7 @@ export const CardsProjects = ({
         </picture>
         <div className={styles.projectInfo}>
           <h3>{title}</h3>
-          <p>{description}</p>
+          <p>{t(`${description}`)}</p>
         </div>
         <div className={styles.technologies}></div>
         <div className={styles.projectFooter}>

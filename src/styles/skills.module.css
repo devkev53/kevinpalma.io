@@ -79,7 +79,7 @@
   margin-top: auto;
   padding: .6rem;
   transition: .4s all ease;
-  z-index: 2;
+  z-index: 0;
   color: rgba(var(--alabaster));
 }
 .skillCard p::before {

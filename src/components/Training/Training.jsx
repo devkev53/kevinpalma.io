@@ -3,43 +3,64 @@ import styles from '../../styles/training.module.css'
 import UMGLogo from '../../../public/assets/EscudoUMG.png'
 import Platzi from '../../../public/assets/platzi.webp'
 import IntecapLogo from '../../../public/assets/intecap.png'
+import {useNearScreen} from "../../hooks/useNearScreen"
+
+import { useTranslation } from 'react-i18next';
+
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRef } from 'react'
 
 export const Training = () => {
+
+  const training = useRef()
+  const {i18n, t}=useTranslation()
+
+
+  const {isNearScreen, activate} = useNearScreen({
+    externalRef: training,
+    once:false
+  })
+
   useEffect(() => {
     AOS.init();
   },[])
+
+  useEffect(() => {
+    isNearScreen && activate()
+  },[isNearScreen])
+
+
   return (
-    <section id='Training' className={styles.trainingWrapper}>
+    <section id='Training' ref={training} className={styles.trainingWrapper}>
       <h1 data-aos="fade-up" className={styles.titleSection}>Formación</h1>
 
       <div className={styles.wrapperCards}>
 
         <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
-            <img src={IntecapLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
+            <img src={IntecapLogo} alt="Logo de INTECAP" />
           </picture>
           <div className={styles.trainingCardGradeWrapper}>
-            <p className={styles.grade}>PREPARACION A LA CERTIFICACION DE MICROSOFT EXCEL 2019</p>
+            <p className={styles.grade}>{t('excel')}</p>
             <p className={styles.time}>2025</p>
           </div>
-          <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
-            Conocer Más
+          <a href="https://intecap.edu.gt/certificacionestics/" target='_blank'  className={styles.showMore}>
+            {t('formationLearMore')}
           </a>
         </div>
 
         <div data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
-            <img src={IntecapLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
+            <img src={IntecapLogo} alt="Logo de INTECAP" />
           </picture>
           <div className={styles.trainingCardGradeWrapper}>
-            <p className={styles.grade}>Análisis de datos con Excel y Power BI (e-learning)</p>
+            <p className={styles.grade}>{t('powerBi')}</p>
             <p className={styles.time}>2024</p>
           </div>
-          <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
-            Conocer Más
+          <a href="https://cursos.intecap.edu.gt/CursosDetalle.aspx?ide=4162&IDUO=104502&p=0" target='_blank'  className={styles.showMore}>
+            {t('formationLearMore')}
           </a>
         </div>
 
@@ -53,11 +74,11 @@ export const Training = () => {
             </div>
           </picture>
           <div className={styles.trainingCardGradeWrapper}>
-            <p className={styles.grade}>Magister Artíum en Seguridad Informatica</p>
+            <p className={styles.grade}>{t('ma')}</p>
             <p className={styles.time}>2024</p>
           </div>
           <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
-            Conocer Más
+            {t('formationLearMore')}
           </a>
         </div>
 
@@ -71,11 +92,11 @@ export const Training = () => {
             </div>
           </picture>
           <div className={styles.trainingCardGradeWrapper}>
-            <p className={styles.grade}>Ingeniero en Sistemas de Información y Ciencias de la Computación</p>
+            <p className={styles.grade}>{t('ing')}</p>
             <p className={styles.time}>2015-2024</p>
           </div>
           <a href="https://umg.edu.gt/maestria/Seguridad_Informatica" target='_blank'  className={styles.showMore}>
-            Conocer Más
+            {t('formationLearMore')}
           </a>
         </div>
 
@@ -84,11 +105,11 @@ export const Training = () => {
             <img src={Platzi} alt="Logo de platzi" />
           </picture>
           <div className={styles.trainingCardGradeWrapper}>
-            <p className={styles.grade}>Ruta de Desarrollo Web</p>
+            <p className={styles.grade}>{t('platzi')}</p>
             <p className={styles.time}>2024</p>
           </div>
           <a href="https://platzi.com/ruta/javascript-full-stack/" target='_blank'  className={styles.showMore}>
-            Conocer Más
+            {t('formationLearMore')}
           </a>
         </div>
 

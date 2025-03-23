@@ -52,7 +52,7 @@ export const PROJECTS = [
   {
     id: 1,
     title: "FarmApp",
-    description: "Esta es una aplicación web, creada para la automatización y control de riego en cultivos, la cual se encarga de abrir el paso del agua por medio de electroválvulas enviando la orden al módulo WiFi + Bluethooth SP32, este se puede realizar manual o automatizar, de igual manera cuenta con impresión de reportes.",
+    description: "farmapp",
     demoLink: "https://farmapp.vercel.app/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/farmapp",
@@ -64,7 +64,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: "NomApp",
-    description: "Aplicación web para la administración de empresas y empleados, cuenta con una tienda interna de la cual se puede vender a los usuarios y se descuenta las cuotas o pagos de la nómina de los empleados, impresión de boleta de nóminas y bonos.",
+    description: "nomapp",
     demoLink: "https://ccardona.pythonanywhere.com/login",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/nomapp",
@@ -76,7 +76,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: "Horus",
-    description: "Aplicación web creada para la administración de un taller mecánico, el cual cuenta con módulo de ventas, clientes, productos, proveedores compras y empleados, así como la impresión de boletas de compra.",
+    description: "horus",
     demoLink: "https://xtestuser.pythonanywhere.com/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/horus",
@@ -100,7 +100,7 @@ export const PROJECTS = [
   {
     id: 5,
     title: "BGRemove",
-    description: "Es una aplicación creada para participar en la Hackathon realizada por Midudev, desarrollador español con gran trayectoria, comparte conocimientos en su canal en Twitch con más de 178K en seguidores, para esta se utilizó tecnología de Cloudinary, y su función es poder remover el fondo de las imágenes subidas al servicio de Cloudinary.",
+    description: "remove",
     demoLink: "https://bg-picremove.vercel.app/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/bg-picremove",
@@ -112,7 +112,7 @@ export const PROJECTS = [
   {
     id: 6,
     title: "SearchGyf",
-    description: "Aplicación web que se realizó como proyecto propuesto por el español Midudev, para conocer el funcionamiento y aprendizaje de ReactJs, consumiendo al API gratuita proporcionada por GIPHY, se aplicó el scroll infinito implementando un observar para no cargar y saturar la página, intentando realizar un tipo de Lazy Loading, usando Hooks personalizados y contexto para el manejo del tema de la aplicación.",
+    description: "gif",
     demoLink: "https://searchphy.vercel.app/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/react-searchgyf",
@@ -124,7 +124,7 @@ export const PROJECTS = [
   {
     id: 7,
     title: "Devter",
-    description: "Esta aplicación web se realizó como un proyecto de practica para conocer NEXTJS, en un curso gratuito de Midudev, utilizando como base de datos SUPABASE, así como su integración de inicio de sesión con Github, el enfoque principal es realizar una aplicación tipo X en donde se pueda devitear con otros desarrolladores.",
+    description: "devter",
     demoLink: "",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/devter",
@@ -136,7 +136,7 @@ export const PROJECTS = [
   {
     id: 8,
     title: "BatataBit Landing Page",
-    description: "Batatabit es una landinpage desarrollada en un curso de Platzi en la cual se implementaba el desarrollo mobile first, siendo el tema principal conocer las bondades de este tipo de desarrollo lo cual evita que se termine rompiendo todo al abrir las aplicaciones en distintos tamaños de pantallas.",
+    description: "batata",
     demoLink: "https://devkev53.github.io/CursoMobileFirts.github.io/",
     imageUrl: farmAppImg,
     repoLink: "https://github.com/devkev53/CursoMobileFirts.github.io?tab=readme-ov-file",

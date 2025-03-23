@@ -173,6 +173,18 @@
     width: 2.5rem;
     padding: 0;
   }
+  .nav .flagsContainer div button {
+    cursor: pointer;
+  }
+
+  .nav .flagsContainer .disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+  .nav .flagsContainer .disabled img {
+    filter: grayscale(1);
+  }
+
   .nav .active i {
     color: rgba(var(--xanthous));
   }

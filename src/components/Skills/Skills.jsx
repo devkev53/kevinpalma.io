@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from '../../styles/skills.module.css'
 import htmlIcon from '../../../public/assets/html5.svg'
 import css3Icon from '../../../public/assets/css3.svg'
@@ -12,21 +12,40 @@ import githubIcon from '../../../public/assets/github.svg'
 import dockerIcon from '../../../public/assets/docker.svg'
 import postgresSqlIcon from '../../../public/assets/postgresql.svg'
 import { SkillCard } from '../SkillCard'
+import {useNearScreen} from "../../hooks/useNearScreen"
+import { useTranslation } from 'react-i18next';
+
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 export const Skills = () => {
+
+  const skills = useRef()
+  const {i18n, t}=useTranslation()
+
+
+  const {isNearScreen, activate} = useNearScreen({
+    externalRef: skills,
+    once:false
+  })
+
   useEffect(() => {
     AOS.init();
   },[])
+
+  useEffect(() => {
+    isNearScreen && activate()
+  },[isNearScreen])
+
   return (
     <section
       id='Skills'
+      ref={skills}
       className={styles.skillsSection}
     >
-      <h1 data-aos="fade-up" className={styles.titleSection}>Habilidades</h1>
+      <h1 data-aos="fade-up" className={styles.titleSection}>{t('skills')}</h1>
       <div className={styles.cardsContainers}>
 
         {/* HTML-5 */}

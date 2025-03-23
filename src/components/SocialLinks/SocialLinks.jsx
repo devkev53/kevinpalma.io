@@ -5,7 +5,7 @@ import styles from '../../styles/socialLinks.module.css'
 const SocialLinks = () => {
   return (
     <>
-      <a className={`${styles.socialLink} ${styles.linkendin}`} href="https://github.com/devkev53" target='_blank'>
+      <a className={`${styles.socialLink} ${styles.linkendin}`} href="https://gt.linkedin.com/in/devkev53" target='_blank'>
         <button>
           <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1">
             <defs></defs>
@@ -19,17 +19,19 @@ const SocialLinks = () => {
           </svg>
         </button>
       </a>
+  
       <a className={`${styles.socialLink} ${styles.github}`} href="https://github.com/devkev53" target='_blank'>
         <button>
           <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.18 11.309c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801s1.3-.807 1.3-1.801c-.001-.992-.582-1.799-1.3-1.799zm4.526-4.683c.149-.365.155-2.439-.635-4.426 0 0-1.811.199-4.551 2.08-.575-.16-1.548-.238-2.519-.238-.973 0-1.945.078-2.52.238C4.74 2.399 2.929 2.2 2.929 2.2c-.789 1.987-.781 4.061-.634 4.426C1.367 7.634.8 8.845.8 10.497c0 7.186 5.963 7.301 7.467 7.301l1.734.002 1.732-.002c1.506 0 7.467-.115 7.467-7.301 0-1.652-.566-2.863-1.494-3.871zm-7.678 10.289h-.056c-3.771 0-6.709-.449-6.709-4.115 0-.879.31-1.693 1.047-2.369C5.537 9.304 7.615 9.9 9.972 9.9h.056c2.357 0 4.436-.596 5.664.531.735.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zm-3.207-5.606c-.718 0-1.3.807-1.3 1.799 0 .994.582 1.801 1.3 1.801.719 0 1.301-.807 1.301-1.801 0-.992-.582-1.799-1.301-1.799z"></path></svg>
         </button>
       </a>
-      <a className={`${styles.socialLink} ${styles.codepen}`} href="https://github.com/devkev53" target='_blank'>
+
+      <a className={`${styles.socialLink} ${styles.codepen}`} href="https://codepen.io/kapr53" target='_blank'>
         <button>
           <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none">
-            <path 
-              fillRule="evenodd" 
-              clipRule="evenodd" 
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M11.4265 1.18077C11.7709 0.939744 12.2291 0.939744 12.5735 1.18077L22.5735 8.18077C22.8408 8.3679 23 8.67369 23 9V16C23 16.3263 22.8408 16.6321 22.5735 16.8192L12.5735 23.8192C12.2291 24.0603 11.7709 24.0603 11.4265 23.8192L1.42654 16.8192C1.15921 16.6321 1 16.3263 1 16V9C1 8.67369 1.15921 8.3679 1.42654 8.18077L11.4265 1.18077ZM3 10.9207V14.0793L5.25621 12.5L3 10.9207ZM7 13.7207L3.74379 16L11 21.0793V16.5207L7 13.7207ZM13 16.5207V21.0793L20.2562 16L17 13.7207L13 16.5207ZM18.7438 12.5L21 14.0793V10.9207L18.7438 12.5ZM20.2562 9L17 11.2793L13 8.47934V3.92066L20.2562 9ZM11 3.92066V8.47934L7 11.2793L3.74379 9L11 3.92066ZM12 10.2207L8.74379 12.5L12 14.7793L15.2562 12.5L12 10.2207Z"
               fill="currentColor"
             />
@@ -37,7 +39,8 @@ const SocialLinks = () => {
           </svg>
         </button>
       </a>
-      <a className={`${styles.socialLink} ${styles.youtube}`} href="https://github.com/devkev53" target='_blank'>
+
+      <a className={`${styles.socialLink} ${styles.youtube}`} href="https://www.youtube.com/@kevinpalma696" target='_blank'>
         <button>
           <svg width="800px" height="800px" viewBox="0 -3 20 20" version="1.1">
             <defs>

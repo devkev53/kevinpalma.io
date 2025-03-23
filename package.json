@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "aos": "3.0.0-beta.6",
+    "i18next": "^24.2.3",
     "intersection-observer": "^0.12.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0",
     "zustand": "^5.0.3"

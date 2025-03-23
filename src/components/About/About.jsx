@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from '../../styles/about.module.css'
 import imgAbout from '../../../public/assets/image-about.svg'
+// Custom Hooks
+import {useNearScreen} from "../../hooks/useNearScreen"
+import { useTranslation } from 'react-i18next';
 
 // AOS
 import AOS from 'aos';
@@ -8,23 +11,37 @@ import 'aos/dist/aos.css';
 
 const About = () => {
 
+  const about = useRef()
+  const {i18n, t}=useTranslation()
+
+
+  const {isNearScreen, activate} = useNearScreen({
+    externalRef: about,
+    once:false
+  })
+
   useEffect(() => {
     AOS.init();
   },[])
 
+
+  useEffect(() => {
+    isNearScreen && activate()
+  },[isNearScreen])
   return (
     <section
+      ref={about}
       id='About'
       className={`${styles.about}`}
     >
-      <h1 data-aos="fade-up" className={styles.titleSection}>Sobre mí</h1>
+      <h1 data-aos="fade-up" className={styles.titleSection}>{t('about')}</h1>
 
       <div data-aos="fade-right" data-aos-duration="700" className={styles.infoWrapper}>
         <div className={styles.textInfo}>
           <p>Kevin Palma</p>
-          <p>Cuento con un grado academico de Magister Artium en Seguridad Informatica, asi como una Ingenieria en Sistemas de Informacion y Ciencias de la Computación, sin embargo desde que realizaba mi preparacion en la carrera me ha apasionado la programacion, y no he parado e aprender y conocer nuevas tecnologias.</p>
-          <p>Actualmente me desempeño en el area de soporte tecnico brindando soporte a personal en la institucion en la que laboro, sin embargo paralelo a esto desarrollo proyectos personales de programación, asi mismo he desarrollado proyectos pequeños para terceras personas, en los cuales he aplicado los conocimientos que he logrado adquirir a lo largo de mi formacion.</p>
-          <p>En lo personal considero que una persona exitosa no solo debe contener habilidades tecnicas, si no que estas se deben acompañar de habilidades blandas, en lo personal creo que cuento con comunicacion clara, trabajo en equipo, adaptacion al cambio y resolucion de problemas.</p>
+          <p>{t("aboutMeP1")}</p>
+          <p>{t("aboutMeP2")}</p>
+          <p>{t("aboutMeP3")}</p>
         </div>
         <picture className={styles.imgAbout}>
           <img src={imgAbout} alt="aboutMeImg" />

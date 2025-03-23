@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 // AOS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,21 +11,38 @@ import SocialLinks from '../SocialLinks/SocialLinks'
 import { useEffect } from 'react';
 // Icons
 import { MdSimCardDownload } from "react-icons/md";
+// Custom Hooks
+import {useNearScreen} from "../../hooks/useNearScreen"
+import { useTranslation } from 'react-i18next';
+
 
 const Home = () => {
+
+  const home = useRef()
+  const {i18n, t}=useTranslation()
+
+  const {isNearScreen, activate} = useNearScreen({
+    externalRef: home,
+    once:false
+  })
 
   useEffect(() => {
     AOS.init();
   },[])
 
+
+  useEffect(() => {
+    isNearScreen && activate()
+  },[isNearScreen])
+
   return (
-    <section id='Home' className={styles.homeContainer}>
+    <section id='Home' ref={home} className={styles.homeContainer}>
       <picture className={styles.containerImg}>
         <img data-aos="zoom-in" src={imgHome} alt="Ilustracion Kevin Palma" />
       </picture>
 
       <div className={styles.home_info}>
-        <p className={styles.home_text1}>Hola! Soy</p>
+        <p className={styles.home_text1}>{t('homeGreeting')}</p>
         <p className={styles.home_text2}>Kevin Palma</p>
 
         <div>
@@ -33,14 +50,14 @@ const Home = () => {
         </div>
 
         <div className={styles.home_text4}>
-          <p>Me considero una persona proactiva apasionada por la tecnologia lo cual me ha llevado a realizar aprendizaje continuo, logrando obtener habilidades para la creacion de soluciones a problemas por medio de la tecnologia, asi mismo me considero de mentalidad abierata y adaptable, listo para asumir nuevos retos y poder expandir las habilidades.</p>
+          <p>{t("homeDescription")}</p>
         </div>
 
         <div className={styles.containerBtn}>
-          <a href="" className={styles.homeBtn}>
+          <a href='https://drive.google.com/file/d/1XtNmX6aFttLOf03wyfwwgzJfcBN1fPZN/view?usp=sharing' target='_blank' className={styles.homeBtn}>
             <button className='btn primaryBtn'>
               <i><MdSimCardDownload/></i>
-              <span>Descargar CV</span>
+              <span>{t('downloadCv')}</span>
             </button>
           </a>
 

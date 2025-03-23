@@ -17,7 +17,17 @@ import { useHeaderHook } from '../../hooks/useHeader'
 import { FaProjectDiagram } from "react-icons/fa";
 import { MdHomeFilled, MdInfo, MdWork, MdSchool } from "react-icons/md";
 
+import '../../utils/i18n'
+import { useTranslation } from 'react-i18next'
+import { useLangHook } from '../../hooks/useLang'
+
+
 const Header = () => {
+
+  const {i18n, t} = useTranslation()
+  const spanishBtn = useRef()
+  const englishBtn = useRef()
+  const {changeToEnglish, changeToSpanish} = useLangHook([spanishBtn.current, englishBtn.current])
 
   const {isActive, closeMenu} = useHeaderHook()
 
@@ -34,7 +44,7 @@ const Header = () => {
   },[])
 
   return (
-    <header ref={headerRef} className={styles.header_container}>
+    <header id='headerNav' ref={headerRef} className={styles.header_container}>
       <div className={styles.logoContainer}>
         <Logo/>
       </div>
@@ -46,16 +56,16 @@ const Header = () => {
         <nav className={`
             ${ styles.nav}
           `}>
-          <a onClick={closeMenu} href="#Home" className={styles.active}>
+          <a onClick={closeMenu} href="#Home">
             <i><MdHomeFilled/></i>
             <span>
-              Home
+              {t('home')}
             </span>
           </a>
           <a onClick={closeMenu} href="#About">
             <i><MdInfo/></i>
             <span>
-              Sobre mí
+              {t('about')}
             </span>
           </a>
           <a onClick={closeMenu} href="#Skills">
@@ -63,32 +73,43 @@ const Header = () => {
               <FaProjectDiagram/>
             </i>
             <span>
-              Habilidades
+              {t('skills')}
             </span>
           </a>
           <a onClick={closeMenu} href="#Training">
             <i><MdSchool/></i>
             <span>
-              Formación
+              {t('training')}
             </span>
           </a>
           <a onClick={closeMenu} href="#Projects">
             <i><MdWork/></i>
             <span>
-              Proyectos
+              {t('projects')}
             </span>
           </a>
           {/* <a onClick={closeMenu} href="#Contact">
             Contacto
           </a> */}
-          {/* <div className={styles.flagsContainer}>
+          <div className={styles.flagsContainer}>
             <div className={styles.flag_item}>
-              <img src={spainFlag} alt="spain_flag" />
+              <button
+                ref={spanishBtn}
+                className={`btnLang`}
+                onClick={changeToSpanish}>
+                <img src={spainFlag} alt="spain_flag" />
+              </button>
             </div>
             <div className={styles.flag_item}>
-              <img src={ukFlag} alt="unitedKindog_flag" />
+              <button
+                ref={englishBtn}
+                className={`btnLang ${styles.disabled}`}
+                onClick={changeToEnglish}
+              >
+                <img src={ukFlag} alt="unitedKindog_flag" />
+              </button>
             </div>
-          </div> */}
+          </div>
         </nav>
       </div>
       <BurgerBtn/>
