@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <Loader/>
+      {/* <Loader/> */}
       <Header/>
       <Home/>
       <About/>

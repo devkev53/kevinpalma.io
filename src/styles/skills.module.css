@@ -27,6 +27,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); */
   gap: 4rem;
   width: min(100%, 90rem);
   padding: 3rem;
@@ -36,7 +39,7 @@
   flex-direction: column;
   /* justify-content: center; */
   justify-content: flex-end;
-  width: 14rem;
+  width: 13rem;
   /* height: 14rem; */
   background: rgba(var(--jet));
   border-radius: 1.8rem;
@@ -46,7 +49,6 @@
   font-weight: bold;
   font-size: 1.4rem;
   border: .2rem solid rgba(0,0,0,.3);
-  /* background: red; */
 }
 .skillCard:hover {
   /* animation: .4s cardHoverBorder ease forwards; */
@@ -69,9 +71,13 @@
   filter: drop-shadow(5px 5px 5px #000);
   transition: .4s ease;
 }
-.skillCard:hover picture img {
-  transform: scale(1.2);
+.github picture img {
+  -webkit-filter: drop-shadow(2px 5px 2px #000);
+  filter: drop-shadow(2px 5px 2px #000);
 }
+/* .skillCard:hover picture img {
+  transform: scale(1.2);
+} */
 .skillCard p {
   position: relative;
   width: 100%;
@@ -157,6 +163,12 @@
 .postgresql p::before {
   background: rgb(var(--royal-purple));
   background: linear-gradient(90deg, var(--postgres) 25%, rgba(var(--alabaster)), 75%, rgb(0,0,0)  100%);
+}
+
+@media (min-width: 375px) {
+  .skillCard {
+    width: 14rem;
+  }
 }
 
 @keyframes cardHoverBorder {

@@ -56,7 +56,7 @@ i18n.use(initReactI18next).init({
         projects: "Projects",
         homeGreeting: "Hello! Am",
         homeDescription:
-          "I consider myself a proactive person with a passion for technology, which has led me to pursue continuous learning, gaining skills to create solutions to problems through technology. I also consider myself open-minded and adaptable, ready to take on new challenges and expand my skills.",
+          "I feel that I am a proactive person with a passion for technology, which has led me to pursue continuous learning, gaining skills to create solutions to problems through technology. I also consider myself open-minded and adaptable, ready to take on new challenges and expand my skills.",
         downloadCv: "Download CV",
         aboutMeP1:
           "I consider myself a proactive person with a passion for technology, which has led me to pursue continuous learning, gaining skills to create solutions to problems through technology. I also consider myself open-minded and adaptable, ready to take on new challenges and expand my skills.",
@@ -83,7 +83,7 @@ i18n.use(initReactI18next).init({
           "This web application was created as a practice project to learn NEXTJS, in a free Midudev course, using SUPABASE as a database, as well as its login integration with Github, the main focus is to create an X-type application where you can discuss with other developers.",
         batata:
           "Batatabit is a landing page developed in a Platzi course that implemented mobile-first development. The main focus is on understanding the benefits of this type of development, which prevents everything from breaking when opening apps on different screen sizes.",
-        footer1: "Buildin in",
+        footer1: "Created in",
         footer2: "with",
         footer3: "by",
       },

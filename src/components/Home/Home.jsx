@@ -14,6 +14,9 @@ import { MdSimCardDownload } from "react-icons/md";
 // Custom Hooks
 import {useNearScreen} from "../../hooks/useNearScreen"
 import { useTranslation } from 'react-i18next';
+// Import GSAP
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 
 const Home = () => {
@@ -38,10 +41,10 @@ const Home = () => {
   return (
     <section id='Home' ref={home} className={styles.homeContainer}>
       <picture className={styles.containerImg}>
-        <img data-aos="zoom-in" src={imgHome} alt="Ilustracion Kevin Palma" />
+        <img data-aos="zoom-in" data-aos-duration="900" src={imgHome} alt="Ilustracion Kevin Palma" />
       </picture>
 
-      <div className={styles.home_info}>
+      <div data-aos="fade-down-right" data-aos-duration="900" className={styles.home_info}>
         <p className={styles.home_text1}>{t('homeGreeting')}</p>
         <p className={styles.home_text2}>Kevin Palma</p>
 
@@ -68,7 +71,7 @@ const Home = () => {
 
       </div>
 
-      <div className={styles.links}>
+      <div data-aos="fade-right" data-aos-duration="900" className={styles.links}>
         <SocialLinks/>
       </div>
 

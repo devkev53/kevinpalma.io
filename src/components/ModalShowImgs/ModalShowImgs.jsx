@@ -48,7 +48,9 @@ export const ModalShowImgs = ({fnClose, imgList}) => {
 
   return (
     <ModalWrapper>
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+      >
         <button onClick={fnClose} className={styles.closeBtn}>
           <i>
             <MdOutlineClose/>

@@ -42,16 +42,16 @@
 }
 
 @media (min-width: 760px) {
+}
+
+
+@media (min-width: 980px) {
   .infoWrapper {
     display: flex;
   }
   .textInfo {
     width: 100%;
   }
-}
-
-
-@media (min-width: 980px) {
   .about {
     border-bottom: transparent;
   }

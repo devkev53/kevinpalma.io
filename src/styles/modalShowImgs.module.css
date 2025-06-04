@@ -9,7 +9,7 @@
   color: rgba(var(--jet));
 }
 .container button i {
-  background: rgba(var(--alabaster),.3);
+  background: rgba(var(--alabaster),.6);
   display: flex;
   padding: 1rem;
   border-radius: 100%;
@@ -64,6 +64,7 @@
 .nextBtn:disabled {
   opacity: .2;
 }
+
 .container .previousBtn:hover i {
   transform: translateX(-1rem);
 }
@@ -73,7 +74,7 @@
 .nextBtn:disabled:hover i,
 .previousBtn:disabled:hover i {
   transform: none;
-  opacity: .2;
+  /* opacity: .2; */
 }
 .previewImgs {
   position: absolute;
@@ -87,6 +88,10 @@
 }
 .previewImgs picture {
   height: 12rem;
+}
+.previousBtn:disabled:hover i,
+.nextBtn:disabled:hover i {
+  background: rgba(var(--alabaster),.6);
 }
 @media (min-width: 760px) {
   .container {

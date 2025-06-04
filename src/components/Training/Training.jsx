@@ -38,7 +38,7 @@ export const Training = () => {
 
       <div className={styles.wrapperCards}>
 
-        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
+        <a href="https://intecap.edu.gt/certificacionestics/" target='_blank' data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={IntecapLogo} alt="Logo de INTECAP" />
           </picture>
@@ -46,12 +46,12 @@ export const Training = () => {
             <p className={styles.grade}>{t('excel')}</p>
             <p className={styles.time}>2025</p>
           </div>
-          <a href="https://intecap.edu.gt/certificacionestics/" target='_blank'  className={styles.showMore}>
+          <p className={styles.showMore}>
             {t('formationLearMore')}
-          </a>
-        </div>
+          </p>
+        </a>
 
-        <div data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
+        <a href="https://cursos.intecap.edu.gt/CursosDetalle.aspx?ide=4162&IDUO=104502&p=0" target='_blank' data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={IntecapLogo} alt="Logo de INTECAP" />
           </picture>
@@ -59,12 +59,12 @@ export const Training = () => {
             <p className={styles.grade}>{t('powerBi')}</p>
             <p className={styles.time}>2024</p>
           </div>
-          <a href="https://cursos.intecap.edu.gt/CursosDetalle.aspx?ide=4162&IDUO=104502&p=0" target='_blank'  className={styles.showMore}>
+          <p className={styles.showMore}>
             {t('formationLearMore')}
-          </a>
-        </div>
+          </p>
+        </a>
 
-        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
+        <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank' data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={UMGLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
             <div className="">
@@ -77,12 +77,12 @@ export const Training = () => {
             <p className={styles.grade}>{t('ma')}</p>
             <p className={styles.time}>2024</p>
           </div>
-          <a href="https://umg.edu.gt/ingenieria/sistemas" target='_blank'  className={styles.showMore}>
+          <p className={styles.showMore}>
             {t('formationLearMore')}
-          </a>
-        </div>
+          </p>
+        </a>
 
-        <div data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
+        <a href="https://umg.edu.gt/maestria/Seguridad_Informatica" target='_blank' data-aos="fade-up" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={UMGLogo} alt="Escudo Universidad Mariano Gálvez de Guatemala" />
             <div className="">
@@ -95,12 +95,12 @@ export const Training = () => {
             <p className={styles.grade}>{t('ing')}</p>
             <p className={styles.time}>2015-2024</p>
           </div>
-          <a href="https://umg.edu.gt/maestria/Seguridad_Informatica" target='_blank'  className={styles.showMore}>
+          <p className={styles.showMore}>
             {t('formationLearMore')}
-          </a>
-        </div>
+          </p>
+        </a>
 
-        <div data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
+        <a href="https://platzi.com/ruta/javascript-full-stack/" target='_blank' data-aos="fade-down" data-aos-duration="500" className={styles.trainingCard}>
           <picture>
             <img src={Platzi} alt="Logo de platzi" />
           </picture>
@@ -108,10 +108,10 @@ export const Training = () => {
             <p className={styles.grade}>{t('platzi')}</p>
             <p className={styles.time}>2024</p>
           </div>
-          <a href="https://platzi.com/ruta/javascript-full-stack/" target='_blank'  className={styles.showMore}>
+          <p className={styles.showMore}>
             {t('formationLearMore')}
-          </a>
-        </div>
+          </p>
+        </a>
 
       </div>
     </section>

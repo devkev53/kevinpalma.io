@@ -51,7 +51,6 @@ export const Skills = () => {
         {/* HTML-5 */}
         <SkillCard
           name="HTML 5"
-          link="https://developer.mozilla.org/es/docs/Glossary/HTML5"
           iconPath={htmlIcon}
           skillStyle={styles.html}
           effect="fade-up"
@@ -61,7 +60,6 @@ export const Skills = () => {
         {/* CSS-3 */}
         <SkillCard
           name="CSS 3"
-          link=""
           iconPath={css3Icon}
           skillStyle={styles.css}
           effect="fade-up"
@@ -71,7 +69,6 @@ export const Skills = () => {
         {/* JavaScript */}
         <SkillCard
           name="JavaScript"
-          link=""
           iconPath={jsIcon}
           skillStyle={`${styles.skillCard} ${styles.js}`}
           effect="fade-up"
@@ -81,7 +78,6 @@ export const Skills = () => {
         {/* TypeScript */}
         <SkillCard
           name="TypeScript"
-          link=""
           iconPath={tsIcon}
           skillStyle={`${styles.skillCard} ${styles.ts}`}
           effect="fade-up"
@@ -91,7 +87,6 @@ export const Skills = () => {
         {/* React */}
         <SkillCard
           name="ReactJs"
-          link=""
           iconPath={reactIcon}
           skillStyle={`${styles.skillCard} ${styles.react}`}
           effect="fade-up"
@@ -101,7 +96,6 @@ export const Skills = () => {
         {/* Python */}
         <SkillCard
           name="Python"
-          link=""
           iconPath={pythonIcon}
           skillStyle={`${styles.skillCard} ${styles.python}`}
           effect="fade-up"
@@ -111,7 +105,6 @@ export const Skills = () => {
         {/* Django */}
         <SkillCard
           name="Django"
-          link=""
           iconPath={djangoIcon}
           skillStyle={`${styles.skillCard} ${styles.django}`}
           effect="fade-up"
@@ -121,7 +114,6 @@ export const Skills = () => {
         {/* Git */}
         <SkillCard
           name="Git"
-          link=""
           iconPath={gitIcon}
           skillStyle={`${styles.skillCard} ${styles.git}`}
           effect="fade-up"
@@ -130,8 +122,7 @@ export const Skills = () => {
 
         {/* Github */}
         <SkillCard
-          name="Github"
-          link=""
+          name="GitHub"
           iconPath={githubIcon}
           skillStyle={`${styles.skillCard} ${styles.github}`}
           effect="fade-up"
@@ -141,7 +132,6 @@ export const Skills = () => {
         {/* docker */}
         <SkillCard
           name="Docker"
-          link=""
           iconPath={dockerIcon}
           skillStyle={`${styles.skillCard} ${styles.docker}`}
           effect="fade-up"
@@ -151,7 +141,6 @@ export const Skills = () => {
         {/* Git */}
         <SkillCard
           name="PosgreSql"
-          link=""
           iconPath={postgresSqlIcon}
           skillStyle={`${styles.skillCard} ${styles.postgresql}`}
           effect="fade-up"

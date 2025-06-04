@@ -6,7 +6,7 @@ const Loader = () => {
   useEffect(()=> {
     setTimeout(() => {
       setShow(true)
-    }, 3000);
+    }, 300);
   },[])
   return (
     <div className={`${show !== true && styles.show } ${styles.wrapper}`}>
