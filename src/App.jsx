@@ -1,27 +1,16 @@
-
-import './App.css'
-import Home from './components/Home/Home'
-import Header from './components/Header/Header'
-import About from './components/About/About'
-import Loader from './components/Loader/Loader'
-import { Skills } from './components/Skills/Skills'
-import { Training } from './components/Training/Training'
-import { Projects } from './components/Projects/Projects'
-import { Footer } from './components/Footer/Footer'
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+// import './App.css'
+import { Home } from './components/Home'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <Loader/> */}
-      <Header/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Training/>
-      <Projects/>
-      <Footer/>
+    <Home/>
     </>
   )
 }
